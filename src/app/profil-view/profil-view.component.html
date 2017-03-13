@@ -1,0 +1,112 @@
+<div class="fill" [style.background-image]="'url(' + profilImg + ')'">
+    <div class="textOverImage">
+        <div style="margin-left: 10px">
+            <h2>IT Freelancer: Soulaymane Zemmouri</h2>
+            <h1>Profil</h1>
+            <h2 style="color:yellow;">{{skill}}</h2>
+        </div>
+        <div class="panelInfo PanelBox panel panel-info">
+            <div class="panel-heading">
+                <h2>Informationen ist nur, was verstanden wird. (Card Friedrich)</h2>
+            </div>
+        </div>
+        <div (click)="scrollToBottom()" class="rightBottomDiv">
+            <span class="glyphicon glyphicon-circle-arrow-down"></span>
+        </div>
+    </div>
+</div>
+<div class="scroll-box row match-my-cols">
+    <div class="col-xs-12 col-md-6">
+        <img [src]="meImg" alt="" class="img-rounded img-responsive" />
+    </div>
+    <div class="col-xs-12 col-md-6">
+        <h4>Soulaymane Zemmouri</h4>
+        <h6>Aktualiert am 05 März 2017</h6>
+        <small><cite title="Leonberg ,Deutschland">Leonberg, Deutschland <i class="glyphicon glyphicon-map-marker">
+                        </i></cite></small>
+        <p>
+            <i class="glyphicon glyphicon-envelope"></i>zemmouri80@hotmail.de
+            <br />
+            <i class="glyphicon glyphicon-globe"></i><a href="http://szemmouri.de">szemmouri.de</a>
+            <br />
+            <i class="glyphicon glyphicon-gift"></i>1980
+            <br />
+            <br />
+            <i>Staatsangehörigkeit:	Deutsch </i>
+            <br />
+            <br />
+            <i>Familienstand: verheiratet </i>
+            <br />
+            <br />
+            <i>Berufsbezeichnung:</i><i>Diplom-Ingenieur Elektrotechnik in Karlsruhe</i>
+            <br />
+            <br />
+            <i>Fachliche Schwerpunkte : </i><i style="color: darkgreen"> Softwareentwickler und Softwarearchitektur von modernen Webanwendungen in .NET C# /Java</i>
+            <br />
+            <br />
+            <i>Branchenerfahrung :Textilindustrie, Automotivebereich, Fertigung</i>
+        </p>
+    </div>
+</div>
+<div>
+    <h2>Projektliste</h2>
+    <table>
+        <template let-group ngFor [ngForOf]="projectList">
+            <tr>
+                <td>Zeitraum</td>
+                <td>{{group.periode}}</td>
+            </tr>
+            <tr>
+                <td>Arbeitsgeber</td>
+                <td>{{group.company}}</td>
+            </tr>
+            <tr>
+                <td>Bezeichnung</td>
+                <td>{{group.art}}</td>
+            </tr>
+            <tr>
+                <td>Realisation</td>
+                <td>{{group.realisation}}</td>
+
+            </tr>
+            <tr>
+                <td>Aufgabenbescheribung</td>
+                <td>
+                    <template let-task ngFor [ngForOf]="group.tasks">
+                        * {{task}}
+                        <br/>
+                    </template>
+                </td>
+
+            </tr>
+            <hr>
+        </template>
+    </table>
+
+    <div *ngFor="let cvContent of cvContents">
+        <h2>{{cvContent.title}}</h2>
+        <table>
+            <template let-trainingData ngFor [ngForOf]="cvContent.trainingsList">
+                <tr>
+                    <td>{{trainingData.periode}}</td>
+                    <td>{{trainingData.training}}</td>
+                </tr>
+            </template>
+        </table>
+    </div>
+    <br/>
+    <table>
+        <template let-expData ngFor [ngForOf]="experinceData">
+            <tr>
+                <td style="font-weight: bold;">{{expData.title}}</td>
+                <td>
+                    <template let-content ngFor [ngForOf]="expData.contents">
+                        {{content}}
+                        <br/>
+                    </template>
+                </td>
+            </tr>
+        </template>
+    </table>
+</div>
+<footer-view></footer-view>

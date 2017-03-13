@@ -1,0 +1,23 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a style="color: #fcab0e" class="navbar-brand" href="#">sZemmouri</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a style="color: #fcab0e"  [routerLink]="['/']" routerLinkActive="active">Home</a></li>
+        <li><a [routerLink]="['/projects']">Projekte</a></li>
+        <li><a [routerLink]="['/profil']">Profil</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a [routerLink]="['/impressum']">Impressum</a></li>
+        <li><a [routerLink]="['/contact']"><span class="glyphicon glyphicon-log-in"></span> Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

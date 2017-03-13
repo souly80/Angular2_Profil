@@ -1,0 +1,29 @@
+<div #container class="fill" [style.background-image]="'url(' + mainImg + ')'">
+    <div class="textOverImage">
+        <div style="margin-left: 10px;">
+            <h2>IT Freelancer: Soulaymane Zemmouri</h2>
+            <h2>Hallo, ich bin Softwareentwickler </h2>
+            <h2 style="color:yellow;">{{skill}}</h2>
+        </div>
+        <div class="panelInfo PanelBox panel panel-info">
+            <div class="panel-heading">
+                <h2>Jede Reise beginnt mit einem ersten Schritt. (Lao-Tse)</h2>
+            </div>
+        </div>
+        <div (click)="scrollToBottom()" class="rightBottomDiv">
+            <span class="glyphicon glyphicon-circle-arrow-down"></span>
+        </div>
+    </div>
+</div>
+<div class="scroll-box row match-my-cols">
+    <div *ngFor="let mainContent of mainContents" class="contentMain col-xs-12 col-md-4">
+        <h1 style="color: #fcab0e">{{mainContent.title}}</h1>
+        <img src="{{mainContent.imageURL}}">
+        <br/>
+        <br/>
+        <br/>
+        <p>{{mainContent.content}}
+        </p>
+    </div>
+</div>
+<footer-view></footer-view>
