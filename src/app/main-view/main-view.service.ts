@@ -2,6 +2,67 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class MainViewService {
+    public getCertificatesData(){
+        return [
+            {
+                title:`Thales`,
+                path:"../../../public/files/thales.pdf"
+            },
+            {
+                title:`Frauenhofer IPA`,
+                path:"../../../public/files/frauenhofer.pdf"
+            },
+            {
+                title:`Siemens`,
+                path:"../../../public/files/siemens.pdf"
+            },
+            {
+                title:`Diplom`,
+                path:"../../../public/files/diplom.pdf"
+            },
+            {
+                title:`Noten`,
+                path:"../../../public/files/noten.pdf"
+            },
+            {
+                title:`Grotz Beckert KG`,
+                path:"../../../public/files/groz_beckert.pdf"
+            }
+        ];
+    }
+
+    getCompaniesStatements(){
+        return [
+            {
+                statement:`Zumdem war Herr Zemmouri ein sehr ehrgeiziger und engagierter Mitarbeiter, der stets einen überdurchschnittlichen EInsatz für unser Unternehmen zeigt`,
+                companyName:"Grotz-Beckert"
+            },
+            {
+                statement:`Er zeichnet sich durch eine hohe Motivation, Eigeninitiative, hohe AUffassungsgabe sowie ein Zielorientiertes und effektives Arbeiten aus`,
+                companyName:"Siemens"
+            },
+            {
+                statement:`Alle ihm zugeteilten Aufgaben hat Herr Zemmouri zu unserer vollsten Zufriedenheit erledigt .wir waren mit seinem Leistungen außerodentlich zufrieden`,
+                companyName:"Fauenhofer IPA"
+            },
+            {
+                statement:`Herr Zemmouri verfügt über gute fachliche Kenntnisse. Er beherrschte nach kurzer Zeit den Umgang mit den neuen Tools und Techniken.`,
+                companyName:"Thales"
+            }
+        ];
+    }
+
+    getCompaniesInfos(){
+        return [
+            {imageURL: require('../../../public/images/hs_karlsruhe.png')},
+            {imageURL: require('../../../public/images/thales.jpg')},
+            {imageURL: require('../../../public/images/frauenhofer.png')},
+            {imageURL: require('../../../public/images/siemens.png')},
+            {imageURL: require('../../../public/images/groz-beckert.gif')},
+            {imageURL: require('../../../public/images/bosch.jpg')},
+        ];
+    }
+
     getMainContents() {
         return [
             {

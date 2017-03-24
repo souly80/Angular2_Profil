@@ -7,15 +7,15 @@ export class ProjectViewService {
             {
                 title: "Softwarearchitekt und Softwareentwickler in der Fertigung",
                 company: "Bosch GmbH FeP/TEF23 in Feuerbach-Stuttgart",
-                date: 'von 07.2018 bis 03.2017',
+                date: 'von 07.2015 bis 03.2017',
                 contents:
                 [
-                    "Neueentwicklung Andon Webanwendung als (Client-Server Application) um Betriebszustand einer Produktionslinie erkennbar anzuzeigen",
-                    "Neuentwicklung der Condition Monitoring Software als moderne Webanwendung mit Alarmsystem um regelmässige Erfassung des Maschinenzustandes (SPA)",
-                    "Weiterentwicklung des MES-Schnittstelle zu Maschinen und Produktionsdatenbank (Webbasierter Benutzeroberfläche Industrie 4.0)",
+                    "Entwicklung und Betrieb von Anzeigesystemen zur Visualisierung von Betriebszuständen und Performance-Daten im internationalen Fertigungsverbund der CP4-Produktion.",
+                    "Implementierung von Schnittstellen zu Manufacturing-Execution-Systemen (MES) Bereitstellung von Produktionsdaten über Webschnittstellen (REST)",                    
                     "Administration und Support Inhouse Windows Server (Win 2008,2012R2)",
-                    "Entwicklung REST Schnittstelle Service für Energie Monitoring ",
-                    "Entwurf und Entwicklung einer Interaktive Dashboards für Industrie 4.0 mit Hilfe Microservices Technologie (Frontend:Typescript/Amcharts,Backend :WebApi C# .NET)",
+                    "Vernetzung von Produktionsdaten über Micro Services im Rahmen der Industrie 4.0 Aktivitäten im Werk Feuerbach Die Umsetzung in den Projekten erfolgte unter Einsatz folgender Technologien:",
+                    "- Frontend: Typescript / Javascript, HTML5, CSS, AngularJS/Angular2",
+                    "- Backend: C# ASP.NET WEBAPI, Datenbanken Oracle12c und MS SQL",
 
                 ],
                 keys: ["AngularJS/Angular2,Typescript,C# ASP.NET WEBAPI,Oracle/MS SQL, Microservices,Industrie 4.0,MES"]
@@ -52,7 +52,7 @@ export class ProjectViewService {
                     "Entwurf, Implementierung und Test von Anwendungen (WPF, Winforms) und Applikationsarchitektur in C# .Net",
                     "Mitentwicklung einer Inhouse-Software-Bibliothek",
                     "Realisierung einer DLL für OPC (Siemens)",
-                    "nbetriebnahme, Betreuung bei Erprobung, Optimierung und Produktionseinführung",                   
+                    "Inbetriebnahme, Betreuung bei Erprobung, Optimierung und Produktionseinführung",                   
 
                 ],
                 keys: ["C#,.NET,Winforms,WPF,Halcon (Bildverarbeitung) Subversion, Redgate .Net Performance Profiler,Infragistics"]

@@ -8,6 +8,7 @@ import { Component, ViewChild, Inject, ElementRef } from '@angular/core';
 export class FooterComponent {
     githubIcon = require('../../../public/images/github.png');
     xingIcon = require('../../../public/images/xing.png');
+    linkedinIcon = require('../../../public/images/linkedin.png');
     //gulpIcon = require('../../../public/images/gulp.jpg');
     constructor() {
     }

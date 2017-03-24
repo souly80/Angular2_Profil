@@ -13,15 +13,19 @@ import { Observable } from 'rxjs/Rx';
 })
 export class ProfilViewComponent {
     private skills: any;
+    public trainingsData:Array<Object>;
     private skill: string;
     private pointer: number = 0;
     meImg = require('../../../public/images/meProfil.png');
+    pdfImg = require('../../../public/images/pdf.png');
     profilImg = require('../../../public/images/project.jpg');
     projectList: any;
     cvContents: any;
     experinceData: any;
     personalData: Array<PersonalData>;
     constructor(private provilViewService: ProfilViewService) {
+
+        this.trainingsData = this.provilViewService.getTrainingData();
         this.personalData = this.provilViewService.getPersonalData();
         this.projectList = this.provilViewService.getProjectList();
         this.cvContents = this.provilViewService.getCvContents();

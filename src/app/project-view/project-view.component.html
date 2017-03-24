@@ -1,4 +1,7 @@
 <div style="margin:1px; padding:5px;" class="fill" [style.background-image]="'url(' + projectImg + ')'">
+    <video style="opacity: 0.5;width:100%;height:100%;" controls autoplay loop="loop" muted >
+        <source src="{{videoPath}}" type="video/mp4">
+    </video>
     <div class="textOverImage">
         <div style="margin-left: 10px">
             <h2>IT Freelancer: Soulaymane Zemmouri</h2>
@@ -15,20 +18,31 @@
         </div>
     </div>
 </div>
-<div style="margin:1px;" class="scroll-box row match-my-cols">
-    <div *ngFor="let projectData of projectsData" class="col-xs-12 col-sm-6" style="background-color: #83b2d0">
-        <div style="vertical-align:middle;text-align:center;background-color:#2A162F;color: #fcab0e">
-            <h3>{{projectData.title}}</h3>
-            <p>{{projectData.date}}</p>
-        </div>
-        <div style="font-size:15px;">
-            <div *ngFor="let content of projectData.contents">
-                <div>* {{content}} </div>
-            </div>
-        </div>
-        <div style="vertical-align:middle;text-align:center;">
-            <div class="label-success">{{projectData.keys}}</div>
+<div class="row">
+    <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
+         <div class="tile purple">
+            <h1><strong>Projeckte</strong></h1>
+            <strong>im Folgenden sind meine erfolgreichte Projekte aufgelistet:</strong>
         </div>
     </div>
-</div>
+  </div>
+  <div class="row">
+    <div class="scroll-box row match-my-cols">
+        <div *ngFor="let projectData of projectsData;let odd=odd; let even=even;" class="col-sm-6 col-sm-4" style="border:0px;background-color:rgba(0,0,0,0);">
+            <div class="tile" [ngClass]="{ odd: odd, even: even }">
+                <div style="vertical-align:middle;text-align:center;background-color:#2A162F;color: #fcab0e">
+                    <h3>{{projectData.title}}</h3>
+                    <p>{{projectData.date}}</p>
+                </div>
+                <div style="font-size:15px;color:white;">
+                    <div *ngFor="let content of projectData.contents">
+                        <div>* {{content}} </div>
+                    </div>
+                </div>
+                <div style="vertical-align:middle;text-align:center;">
+                    <div class="label-success">{{projectData.keys}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
 <footer-view></footer-view>

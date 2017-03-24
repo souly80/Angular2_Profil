@@ -3,6 +3,40 @@ import { PersonalData } from './PersonalData'
 
 @Injectable()
 export class ProfilViewService {
+    
+    public getTrainingData(){
+        return [
+            {
+                title:`MVTec Halcon Bildverarbeitung`,
+                path:"../../../public/files/mvtec.pdf"
+            },
+            {
+                title:`Basta .NET Konferenz`,
+                path:"../../../public/files/basta.pdf"
+            },
+            {
+                title:`WPF .NET 4`,
+                path:"../../../public/files/ppedv.pdf"
+            },
+            {
+                title:`Technologie Forum 4`,
+                path:"../../../public/files/technologie_forum_4.pdf"
+            },
+            {
+                title:`Technologie Forum 5`,
+                path:"../../../public/files/technologie_forum_5.pdf"
+            },
+            {
+                title:`Technologie Forum 6`,
+                path:"../../../public/files/technologie_forum_6.pdf"
+            },
+            {
+                title:`Technologie Forum 7`,
+                path:"../../../public/files/technologie_forum_7.pdf"
+            }
+        ];
+    }
+
     public getPersonalData() {
         let retValue = new Array<PersonalData>();
         var pd = new PersonalData();

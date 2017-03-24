@@ -1,4 +1,7 @@
 <div #container class="fill" [style.background-image]="'url(' + mainImg + ')'">
+    <video style="opacity: 0.5;width:100%;height:100%;" controls autoplay loop="loop" muted >
+        <source src="{{videoPath}}" type="video/mp4">
+    </video>
     <div class="textOverImage">
         <div style="margin-left: 10px;">
             <h2>IT Freelancer: Soulaymane Zemmouri</h2>
@@ -15,15 +18,75 @@
         </div>
     </div>
 </div>
-<div class="scroll-box row match-my-cols">
-    <div *ngFor="let mainContent of mainContents" class="contentMain col-xs-12 col-md-4">
-        <h1 style="color: #fcab0e">{{mainContent.title}}</h1>
-        <img src="{{mainContent.imageURL}}">
-        <br/>
-        <br/>
-        <br/>
-        <p>{{mainContent.content}}
-        </p>
+<div class="row">
+    <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
+         <div class="tile purple">
+            <h1><strong>meine Perspektive</strong></h1>
+        </div>
+    </div>
+    <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
+         Zu meiner Aufgaben für die Softwareentwicklungsprojekte gehören:
+         <h4>Software-Architektur-Entwicklung, die sich auf Wartbarkeit, Skalierbarkeit, Sicherheit, Leistung konzentrieren</h4>
+         Im folgenden sind meine technische Schwerpunkte gelistet:
+         <h4><strong>Typescript/Javascript, HTML5, CSS Angular 2 und .NET</strong></h4>
+    </div>
+  </div>
+<div class="row">
+    <div *ngFor="let mainContent of mainContents;let odd=odd; let even=even;" class="col-sm-6 col-sm-4" style="border:0px;background-color:rgba(0,0,0,0);">
+        <div class="tile" [ngClass]="{ odd: odd, even: even }">
+            <div style="vertical-align:middle;text-align:center;">
+                <h1 style="color: #fcab0e">{{mainContent.title}}</h1>
+                <img src="{{mainContent.imageURL}}">
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <p>{{mainContent.content}}
+            </p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12" style="border:0px;background-color:rgba(0,0,0,0);">
+        <div *ngFor="let companyInfo of companiesInfos"  class="col-lg-2 col-md-2 col-sm-2 col-xs-12" style="border:0px;background-color:rgba(0,0,0,0);">
+            <img src="{{companyInfo.imageURL}}" class="img-responsive img-center">
+        </div>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div *ngFor="let companyStatement of companiesStatements;let odd=odd; let even=even;" class="col-sm-6 col-sm-3" style="border:0px;background-color:rgba(0,0,0,0);">
+        <div class="tile" [ngClass]="{ odd: odd, even: even }">
+            <div style="vertical-align:middle;text-align:center;">
+                <h1 style="color: #fcab0e">{{companyStatement.companyName}}</h1>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <p>{{companyStatement.statement}}
+            </p>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
+        <div class="tile purple">
+            <h1><strong>Zeugnisse</strong></h1>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div *ngFor="let certificateData of certificatesData;let odd=odd; let even=even;" class="col-sm-6 col-sm-3" style="border:0px;background-color:rgba(0,0,0,0);">
+        <div class="tile" [ngClass]="{ odd: odd, even: even }">
+            <div style="vertical-align:middle;text-align:center;">
+                <a href="{{certificateData.path}}" target="_blank">
+                    <h1 style="color: #fcab0e">{{certificateData.title}}</h1>
+                    <img src="{{pdfImg}}">
+                </a>
+            </div>
+        </div>
     </div>
 </div>
 <footer-view></footer-view>

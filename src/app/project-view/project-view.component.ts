@@ -6,6 +6,11 @@ import { Observable } from 'rxjs/Rx';
 @Component({
   selector: 'project-view',
   templateUrl: './project-view.component.html',
+  //styleUrls:["./project-view.css"],
+   styles: [`
+    .even { background: #DC572E; }
+    .odd { background: #7f132d; }
+    `],
   providers: [ProjectViewService],
 })
 export class ProjectViewComponent {
@@ -14,6 +19,7 @@ export class ProjectViewComponent {
   private pointer: number = 0;
 
   projectImg = require('../../../public/images/profil.jpg');
+  videoPath = require('../../../public/images/video_project.mp4');   
   projectsData: any;
   constructor(private projectViewService: ProjectViewService) {
     this.projectsData = this.projectViewService.getProjects();
