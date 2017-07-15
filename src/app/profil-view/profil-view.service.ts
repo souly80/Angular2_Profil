@@ -7,6 +7,10 @@ export class ProfilViewService {
     public getTrainingData(){
         return [
             {
+                title:`AngularJS und Javascript Intensiv-Workshop`,
+                path:"../../../public/files/angularJS.pdf"
+            },
+            {
                 title:`MVTec Halcon Bildverarbeitung`,
                 path:"../../../public/files/mvtec.pdf"
             },
@@ -190,6 +194,14 @@ export class ProfilViewService {
 
     public getProjectList() {
         return [
+            
+            {
+                "periode": "Seit 04/2017",
+                "company": "CREALOGIX Group - The Leader for the Digital Bank in Stuttgart",
+                "art": "Senior Web Entwickler",
+                "realisation": `HTML5, Angular 2,Foundation/Bootstrap,CSS,Javascript/Typescript`,
+                "tasks": ["Analyse, Design, Implementierung Online-Banking Software"]
+            },
             {
                 "periode": "07/2015 - 03/2017",
                 "company": "Bosch GmbH FeP/TEF23 in Feuerbach-Stuttgart",

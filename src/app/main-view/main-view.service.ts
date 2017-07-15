@@ -27,6 +27,10 @@ export class MainViewService {
             {
                 title:`Grotz Beckert KG`,
                 path:"../../../public/files/groz_beckert.pdf"
+            },
+            {
+                title:`Bosch GmbH`,
+                path:"../../../public/files/bosch.pdf"
             }
         ];
     }
@@ -60,13 +64,14 @@ export class MainViewService {
             {imageURL: require('../../../public/images/siemens.png')},
             {imageURL: require('../../../public/images/groz-beckert.gif')},
             {imageURL: require('../../../public/images/bosch.jpg')},
+            {imageURL: require('../../../public/images/crealogix.jpg')},
         ];
     }
 
     getMainContents() {
         return [
             {
-                title: "actual",
+                title: "current",
                 imageURL: require('../../../public/images/actual.png'),
                 content: `
                 Meine Mission, Probleme zu verstehen und dann eine technische Lösung in Form von Software umzusetzen.
