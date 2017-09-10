@@ -31,4 +31,4 @@ export const appDeklarations: any[] = [
       ProfilViewComponent, ContactComponent, FooterComponent, ImpressumComponent
 ];
 
-export const routing = RouterModule.forRoot(routes);
+export const routing = RouterModule.forRoot(routes, {useHash: true});

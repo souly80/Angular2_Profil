@@ -21,22 +21,6 @@ export class ProfilViewService {
             {
                 title:`WPF .NET 4`,
                 path:"../../../public/files/ppedv.pdf"
-            },
-            {
-                title:`Technologie Forum 4`,
-                path:"../../../public/files/technologie_forum_4.pdf"
-            },
-            {
-                title:`Technologie Forum 5`,
-                path:"../../../public/files/technologie_forum_5.pdf"
-            },
-            {
-                title:`Technologie Forum 6`,
-                path:"../../../public/files/technologie_forum_6.pdf"
-            },
-            {
-                title:`Technologie Forum 7`,
-                path:"../../../public/files/technologie_forum_7.pdf"
             }
         ];
     }
@@ -117,6 +101,10 @@ export class ProfilViewService {
                 "title": "Schulung",
                 "trainingsList": [
                     {
+                        "periode": "06.07.2017",
+                        "training": "Java Forum Stuttgart"
+                    },
+                    {
                         "periode": "15.06.2016-17.06.2016",
                         "training": "AngularJS und Javascript Intensiv-Workshop"
                     },
@@ -126,7 +114,7 @@ export class ProfilViewService {
                     },
                     {
                         "periode": "04.07.2013",
-                        "training": "Java Forum"
+                        "training": "Java Forum Stuttgart "
                     },
                     {
                         "periode": "12.12.2011-15.12.2011",

@@ -10,9 +10,9 @@
                 <h2>Informationen ist nur, was verstanden wird. (Card Friedrich)</h2>
             </div>
         </div>
-        <div (click)="scrollToBottom()" class="rightBottomDiv">
+        <!--div (click)="scrollToBottom()" class="rightBottomDiv">
             <span class="glyphicon glyphicon-circle-arrow-down"></span>
-        </div>
+        </div-->
     </div>
 </div>
 <div class="scroll-box row match-my-cols">
@@ -73,7 +73,7 @@
                 <td>Aufgabenbescheribung</td>
                 <td>
                     <template let-task ngFor [ngForOf]="group.tasks">
-                        * {{task}}
+                        <div class="container">* {{task}}</div>
                         <br/>
                     </template>
                 </td>
