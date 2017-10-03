@@ -13,7 +13,7 @@ import {CommonUtils} from '../CommonUtils';
 export class ContactComponent {
     contactImg = require('../../../public/images/me.jpg');
     contactContents: any;
-    private skills: any;
+    private skills: Array<string>;
     private skill: string;
     private pointer: number = 0;
     constructor(private contactService: ContactService) {
