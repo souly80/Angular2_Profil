@@ -32,5 +32,4 @@ export class ContactComponent {
     public scrollToBottom() {
         CommonUtils.scrollToBottomWithAnimate(0);
     }
-
 }
