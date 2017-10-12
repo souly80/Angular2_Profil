@@ -1,0 +1,54 @@
+.visitcart-center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.name {
+    margin-top: 30px;
+}
+
+.main {
+    padding: 45px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.passion {
+    margin-top: 8px;
+    color: gray;
+}
+
+.graphic {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    z-index: 2;
+    box-shadow: 0 0 0 1.5em #ffffff;
+    position: relative;
+}
+
+.graphic-lines {
+    display: block;
+    position: relative;
+}
+
+.graphic-lines:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -45px;
+    width: calc(100% + 90px);
+    height: 1px;
+    z-index: 1;
+    background: lightgray;
+}
+
+.description {
+    margin-top: 10px;
+}
+
+.description a {
+    color: black;
+}
