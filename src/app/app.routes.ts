@@ -11,14 +11,15 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer-view/footer.component';
 import { ImpressumComponent } from './impressum-view/impressum.component';
 import { ProfilViewService } from './profil-view/profil-view.service';
+import {VisitCartComponent} from "./visit-card/visit-cart.component";
 
 
 export const routes: Routes = [
       { path: '', component: MainViewComponent },
       { path: 'projects', component: ProjectViewComponent },
       { path: 'profil', component: ProfilViewComponent },
-      { path: 'contact', component: ContactComponent },
-      { path: 'impressum', component: ImpressumComponent },
+      { path: 'contact', component: VisitCartComponent },
+      { path: 'impressum', component: ImpressumComponent }
 
 ];
 
@@ -28,7 +29,8 @@ export const appRoutingProviders: any[] = [
 
 export const appDeklarations: any[] = [
       AppComponent, MenuBarComponent, ProjectViewComponent, MainViewComponent,
-      ProfilViewComponent, ContactComponent, FooterComponent, ImpressumComponent
+      ProfilViewComponent, ContactComponent, FooterComponent, ImpressumComponent,
+      VisitCartComponent
 ];
 
 export const routing = RouterModule.forRoot(routes, {useHash: true});

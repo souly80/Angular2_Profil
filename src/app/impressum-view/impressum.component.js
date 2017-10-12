@@ -9,17 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var MenuBarComponent = (function () {
-    function MenuBarComponent() {
+var CommonUtils_1 = require("../CommonUtils");
+var ImpressumComponent = (function () {
+    function ImpressumComponent() {
+        this.impressumImg = require('../../../public/images/impresum.jpg');
     }
-    return MenuBarComponent;
+    ImpressumComponent.prototype.scrollToBottom = function () {
+        CommonUtils_1.CommonUtils.scrollToBottomWithAnimate(0);
+    };
+    return ImpressumComponent;
 }());
-MenuBarComponent = __decorate([
+ImpressumComponent = __decorate([
     core_1.Component({
-        selector: 'menu-bar',
-        templateUrl: './menu-bar.component.html'
+        selector: 'impressum-view',
+        templateUrl: './impressum.component.html',
     }),
     __metadata("design:paramtypes", [])
-], MenuBarComponent);
-exports.MenuBarComponent = MenuBarComponent;
-//# sourceMappingURL=menu-bar.component.js.map
+], ImpressumComponent);
+exports.ImpressumComponent = ImpressumComponent;
+//# sourceMappingURL=impressum.component.js.map

@@ -11,15 +11,23 @@ import { MainViewComponent } from './main-view/main-view.component';
 import { FooterComponent } from './footer-view/footer.component';
 import { ImpressumComponent } from './impressum-view/impressum.component';
 
-import {Ng2PageScrollModule} from 'ng2-page-scroll';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
+import {VisitCartComponent} from "./visit-card/visit-cart.component";
 
 @NgModule({
-  imports: [BrowserModule,routing,Ng2PageScrollModule.forRoot(),ChartsModule],
+  imports: [BrowserModule,routing,ChartsModule],
   declarations: [appDeklarations],
   providers: [appRoutingProviders],
-  entryComponents: [AppComponent, MainViewComponent, ProjectViewComponent, 
-  ProfilViewComponent, MenuBarComponent,FooterComponent,ImpressumComponent],
+  entryComponents: [
+      AppComponent,
+      MainViewComponent,
+      ProjectViewComponent,
+      ProfilViewComponent,
+      MenuBarComponent,
+      FooterComponent,
+      ImpressumComponent,
+      VisitCartComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

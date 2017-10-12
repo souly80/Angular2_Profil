@@ -4,7 +4,6 @@ import { DOCUMENT } from '@angular/platform-browser';
 import { Observable } from 'rxjs/Rx';
 
 import { MainViewService } from './main-view.service';
-import { PageScrollService, PageScrollInstance } from 'ng2-page-scroll';
 import {CommonUtils} from '../CommonUtils';
 const image = require('../../../public/images/home.jpg');
 
@@ -31,7 +30,7 @@ export class MainViewComponent {
     private skills: any;
     private skill: string;
     private pointer: number = 0;
-    constructor( @Inject(DOCUMENT) private document: any, private mainService: MainViewService, private pageScrollService: PageScrollService) {
+    constructor( @Inject(DOCUMENT) private document: any, private mainService: MainViewService) {
         this.mainContents = this.mainService.getMainContents();
         this.certificatesData = this.mainService.getCertificatesData();
         this.skills = ["C#", "Java", "JavaScript", "CSS", "AngularJS", "Angular 2", "Typescript", "..."];

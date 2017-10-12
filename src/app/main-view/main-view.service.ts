@@ -5,16 +5,12 @@ export class MainViewService {
     public getCertificatesData(){
         return [
             {
-                title:`Thales`,
-                path:"../../../public/files/thales.pdf"
+                title:`Bosch GmbH`,
+                path:"../../../public/files/bosch.pdf"
             },
             {
-                title:`Frauenhofer IPA`,
-                path:"../../../public/files/frauenhofer.pdf"
-            },
-            {
-                title:`Siemens`,
-                path:"../../../public/files/siemens.pdf"
+                title:`Grotz Beckert KG`,
+                path:"../../../public/files/groz_beckert.pdf"
             },
             {
                 title:`Diplom`,
@@ -25,18 +21,26 @@ export class MainViewService {
                 path:"../../../public/files/noten.pdf"
             },
             {
-                title:`Grotz Beckert KG`,
-                path:"../../../public/files/groz_beckert.pdf"
+                title:`Siemens`,
+                path:"../../../public/files/siemens.pdf"
             },
             {
-                title:`Bosch GmbH`,
-                path:"../../../public/files/bosch.pdf"
-            }
+                title:`Frauenhofer IPA`,
+                path:"../../../public/files/frauenhofer.pdf"
+            },
+            {
+                title:`Thales`,
+                path:"../../../public/files/thales.pdf"
+            },
         ];
     }
 
     getCompaniesStatements(){
         return [
+            {
+                statement:`Herr Herr Zemmouri war ein äußert engagierter Mitarbeiter, der seine Aufgaben jederzeit mit voller Einsatzbereitsschaft erolgreich erfüllte`,
+                companyName:"Bosch GmbH Stuttgart"
+            },
             {
                 statement:`Zumdem war Herr Zemmouri ein sehr ehrgeiziger und engagierter Mitarbeiter, der stets einen überdurchschnittlichen EInsatz für unser Unternehmen zeigt`,
                 companyName:"Grotz-Beckert"
@@ -58,13 +62,13 @@ export class MainViewService {
 
     getCompaniesInfos(){
         return [
+            {imageURL: require('../../../public/images/crealogix.jpg')},
+            {imageURL: require('../../../public/images/bosch.jpg')},
+            {imageURL: require('../../../public/images/groz-beckert.gif')},
             {imageURL: require('../../../public/images/hs_karlsruhe.png')},
-            {imageURL: require('../../../public/images/thales.jpg')},
             {imageURL: require('../../../public/images/frauenhofer.png')},
             {imageURL: require('../../../public/images/siemens.png')},
-            {imageURL: require('../../../public/images/groz-beckert.gif')},
-            {imageURL: require('../../../public/images/bosch.jpg')},
-            {imageURL: require('../../../public/images/crealogix.jpg')},
+            {imageURL: require('../../../public/images/thales.jpg')}
         ];
     }
 

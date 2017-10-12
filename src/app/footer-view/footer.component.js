@@ -9,17 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var MenuBarComponent = (function () {
-    function MenuBarComponent() {
+var FooterComponent = (function () {
+    //gulpIcon = require('../../../public/images/gulp.jpg');
+    function FooterComponent() {
+        this.githubIcon = require('../../../public/images/github.png');
+        this.xingIcon = require('../../../public/images/xing.png');
+        this.linkedinIcon = require('../../../public/images/linkedin.png');
     }
-    return MenuBarComponent;
+    return FooterComponent;
 }());
-MenuBarComponent = __decorate([
+FooterComponent = __decorate([
     core_1.Component({
-        selector: 'menu-bar',
-        templateUrl: './menu-bar.component.html'
+        selector: 'footer-view',
+        templateUrl: './footer.component.html',
+        styleUrls: ['footer.style.css']
     }),
     __metadata("design:paramtypes", [])
-], MenuBarComponent);
-exports.MenuBarComponent = MenuBarComponent;
-//# sourceMappingURL=menu-bar.component.js.map
+], FooterComponent);
+exports.FooterComponent = FooterComponent;
+//# sourceMappingURL=footer.component.js.map
