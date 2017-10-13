@@ -1,11 +1,16 @@
 import { Injectable } from '@angular/core';
-import { PersonalData } from './PersonalData'
+import {IPersonalData, ITrainingData} from "./profil-view.interface";
+import {Observable} from "rxjs/Observable";
 
 @Injectable()
 export class ProfilViewService {
-    
-    public getTrainingData(){
-        return [
+
+    public getTrainingData(): Observable<ITrainingData[]>{
+        let trainingData = [
+            {
+                title:`JavaScript Day 2017`,
+                path:"../../../public/files/javascript_Day_2017.JPG"
+            },
             {
                 title:`AngularJS und Javascript Intensiv-Workshop`,
                 path:"../../../public/files/angularJS.pdf"
@@ -23,19 +28,28 @@ export class ProfilViewService {
                 path:"../../../public/files/ppedv.pdf"
             }
         ];
+        return Observable.create((observer:any)=> {
+            observer.next(trainingData);
+            observer.complete();
+        });
     }
 
-    public getPersonalData() {
-        let retValue = new Array<PersonalData>();
-        var pd = new PersonalData();
-        pd.tdName = "Name";
-        pd.tdValue = "Soulaymane Zemmouri";
-        retValue.push(pd);
-        pd = new PersonalData();
-        pd.tdName = "Geburtsdatum";
-        pd.tdValue = "03.08.1980";
-        retValue.push(pd);
-        return retValue;
+    public getPersonalData(): Observable<IPersonalData[]> {
+        let data = new Array<IPersonalData>();
+        var pd = {
+            tdName: "Name",
+            tdValue: "Soulaymane Zemmouri"
+        } as IPersonalData;
+        data.push(pd);
+        pd = {
+            tdName: "Geburtsdatum",
+            tdValue: "03.08.1980"
+        } as IPersonalData;
+        data.push(pd);
+        return Observable.create((observer: any)=> {
+            observer.next(data);
+            observer.complete();
+        });
     }
 
     public getExperienceData(){
@@ -75,10 +89,10 @@ export class ProfilViewService {
             {
                 "title":"Methoden",
                 "contents":["Objektorientiertes Design OOD, Programmierung OOP ",
-                "Build Management: Maven ,Continuous Integration: Jenkins ",
-                "Test Werkzeuge : JUnit", 
-                "Nuint Code Analysen: SonarQube,Reshaper ",
-                "Configuration Management: Subversion, RTC (IBM)"]
+                    "Build Management: Maven ,Continuous Integration: Jenkins ",
+                    "Test Werkzeuge : JUnit",
+                    "Nuint Code Analysen: SonarQube,Reshaper ",
+                    "Configuration Management: Subversion, RTC (IBM)"]
             },
             {
                 "title":"Prozesse",
@@ -182,7 +196,7 @@ export class ProfilViewService {
 
     public getProjectList() {
         return [
-            
+
             {
                 "periode": "Seit 04/2017",
                 "company": "CREALOGIX Group - The Leader for the Digital Bank in Stuttgart",
@@ -198,11 +212,11 @@ export class ProfilViewService {
                 Oracle/MS SQL Server TFS , Node,NPM,Gulp,SystemJS,Nuget,Git,DevExpress Single Page Application,Microservices,Manufacturing
                 Execution System,Industrie 4.0`,
                 "tasks": ["Neueentwicklung Andon Webanwendung als (Client-Server Application) um Betriebszustand einer Produktionslinie erkennbar anzuzeigen",
-                "Neuentwicklung der Condition Monitoring Software als moderne Webanwendung mit Alarmsystem um regelmässige Erfassung des Maschinenzustandes (SPA)",
-                "Weiterentwicklung des MES-Schnittstelle zu Maschinen und Produktionsdatenbank (Webbasierter Benutzeroberfläche Industrie 4.0)",
-                "Administration und Support Inhouse Windows Server (Win 2008,2012R2)",
-                "Entwicklung REST Schnittstelle Service für Energie Monitoring",
-                "Entwurf und Entwicklung einer Interaktive Dashboards für Industrie 4.0 mit Hilfe Microservices Technologie (Frontend:Typescript/Amcharts,Backend :WebApi C# .NET)"]
+                    "Neuentwicklung der Condition Monitoring Software als moderne Webanwendung mit Alarmsystem um regelmässige Erfassung des Maschinenzustandes (SPA)",
+                    "Weiterentwicklung des MES-Schnittstelle zu Maschinen und Produktionsdatenbank (Webbasierter Benutzeroberfläche Industrie 4.0)",
+                    "Administration und Support Inhouse Windows Server (Win 2008,2012R2)",
+                    "Entwicklung REST Schnittstelle Service für Energie Monitoring",
+                    "Entwurf und Entwicklung einer Interaktive Dashboards für Industrie 4.0 mit Hilfe Microservices Technologie (Frontend:Typescript/Amcharts,Backend :WebApi C# .NET)"]
             },
             {
                 "periode": "10/2012 bis 06/2015",
@@ -212,16 +226,16 @@ export class ProfilViewService {
                 Java,Maven,Vaadin,C# .NET WPF,REST,WCF MS Visual Studio 2010,Eclipse
                 `,
                 "tasks": ["Implementierung Serverseitige Webanwendung mit Vaadin Framework (Java MVP CSS)",
-                "Erweiterung neuer Features in Eclipse Plugins",
-                "Entwicklung einer Middle Komponente, die als ein WCF Webservice realisiert wurde (.Net c# 4.0)",
-                "Erstellung eigenes Tools (WPF C# .Net MVVM) für die HP Quality Center Plattform",
-                "Implementierung eines Tools (Java) zur Überwachung ein Lizenzserver",
-                "Erstellung eines Skriptes zum importieren ein Excel Datei in ClearQuest (REST Interface)",
-                "Technische Betreuung der Einführung des Application Lifecycle Management Systems",
-                "Durchführung Anforderungsworkshops mit CC/DA und CC/AS Standorten",
-                "Windows terminal Server Betreuung (Win 2003,2008,2012)",
-                "Entwurf eines Migrationskonzept aus HP Quality Center 10.0 nach Application Lifecycle Management 11.5",
-                "Kozeption des Parallelbetriebs QC 10 und ALM 11.5 auf den Clients"]                
+                    "Erweiterung neuer Features in Eclipse Plugins",
+                    "Entwicklung einer Middle Komponente, die als ein WCF Webservice realisiert wurde (.Net c# 4.0)",
+                    "Erstellung eigenes Tools (WPF C# .Net MVVM) für die HP Quality Center Plattform",
+                    "Implementierung eines Tools (Java) zur Überwachung ein Lizenzserver",
+                    "Erstellung eines Skriptes zum importieren ein Excel Datei in ClearQuest (REST Interface)",
+                    "Technische Betreuung der Einführung des Application Lifecycle Management Systems",
+                    "Durchführung Anforderungsworkshops mit CC/DA und CC/AS Standorten",
+                    "Windows terminal Server Betreuung (Win 2003,2008,2012)",
+                    "Entwurf eines Migrationskonzept aus HP Quality Center 10.0 nach Application Lifecycle Management 11.5",
+                    "Kozeption des Parallelbetriebs QC 10 und ALM 11.5 auf den Clients"]
             },
             {
                 "periode": "05/2008 bis 08/20012",
@@ -233,11 +247,11 @@ export class ProfilViewService {
                 MS Visual Studio 2010
                 `,
                 "tasks": ["Machbarkeitsuntersuchung von Bildverarbeitungssysteme",
-                "Entwicklung von Bildverarbeitungsalgorithmen",
-                "Entwurf, Implementierung und Test von Anwendungen (WPF, Winforms) und Applikationsarchitektur in C# .Net",
-                "Mitentwicklung einer Inhouse-Software-Bibliothek",
-                "Realisierung einer DLL für OPC (Siemens)",
-                "Inbetriebnahme, Betreuung bei Erprobung, Optimierung und Produktionseinführung"]                
+                    "Entwicklung von Bildverarbeitungsalgorithmen",
+                    "Entwurf, Implementierung und Test von Anwendungen (WPF, Winforms) und Applikationsarchitektur in C# .Net",
+                    "Mitentwicklung einer Inhouse-Software-Bibliothek",
+                    "Realisierung einer DLL für OPC (Siemens)",
+                    "Inbetriebnahme, Betreuung bei Erprobung, Optimierung und Produktionseinführung"]
             },
         ];
     }

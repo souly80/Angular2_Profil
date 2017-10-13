@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { CommonUtils } from '../CommonUtils';
 import { ProfilViewService } from './profil-view.service';
-import { PersonalData } from './PersonalData';
 import { Observable } from 'rxjs/Rx';
+import {IPersonalData, ITrainingData} from "./profil-view.interface";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
     selector: 'profil-view',
@@ -11,9 +12,10 @@ import { Observable } from 'rxjs/Rx';
     styleUrls: ['profil.style.css']
 
 })
-export class ProfilViewComponent {
+export class ProfilViewComponent implements OnInit{
+
     private skills: any;
-    public trainingsData:Array<Object>;
+    public trainingsData:Array<ITrainingData>;
     private skill: string;
     private pointer: number = 0;
     meImg = require('../../../public/images/meProfil.png');
@@ -22,11 +24,8 @@ export class ProfilViewComponent {
     projectList: any;
     cvContents: any;
     experinceData: any;
-    personalData: Array<PersonalData>;
-    constructor(private provilViewService: ProfilViewService) {
-
-        this.trainingsData = this.provilViewService.getTrainingData();
-        this.personalData = this.provilViewService.getPersonalData();
+    personalData: Array<IPersonalData>;
+    constructor(private activatedRoute: ActivatedRoute, private provilViewService: ProfilViewService) {
         this.projectList = this.provilViewService.getProjectList();
         this.cvContents = this.provilViewService.getCvContents();
         this.experinceData = this.provilViewService.getExperienceData();
@@ -38,6 +37,14 @@ export class ProfilViewComponent {
                 else
                     this.pointer++;
                 this.skill = this.skills[this.pointer];
+            });
+    }
+
+    ngOnInit(): void {
+        this.activatedRoute.data.pluck('profilData')
+            .subscribe(( data: any) => {
+                this.trainingsData = data[0];
+                data.personalData = data[1];
             });
     }
 

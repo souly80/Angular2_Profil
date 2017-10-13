@@ -13,12 +13,13 @@ import { ImpressumComponent } from './impressum-view/impressum.component';
 import { ProfilViewService } from './profil-view/profil-view.service';
 import {VisitCartComponent} from "./visit-card/visit-cart.component";
 import {VisitCartResolver} from "./visit-card/visit-cart.resolver";
+import {ProfilViewResolver} from "./profil-view/provil-view.resolver";
 
 
 export const routes: Routes = [
       { path: '', component: MainViewComponent },
       { path: 'projects', component: ProjectViewComponent },
-      { path: 'profil', component: ProfilViewComponent },
+      { path: 'profil', component: ProfilViewComponent, resolve: {profilData: ProfilViewResolver } },
       { path: 'contact', component: VisitCartComponent, resolve: { contactData: VisitCartResolver }},
       { path: 'impressum', component: ImpressumComponent }
 
@@ -28,7 +29,8 @@ export const appRoutingProviders: any[] = [
       ProjectViewService,
       ContactService,
       ProfilViewService,
-      VisitCartResolver
+      VisitCartResolver,
+      ProfilViewResolver
 ];
 
 export const appDeklarations: any[] = [
