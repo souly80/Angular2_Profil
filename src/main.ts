@@ -1,4 +1,7 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'jquery';
+import 'bootstrap/dist/js/bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';

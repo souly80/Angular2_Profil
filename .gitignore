@@ -3,3 +3,5 @@
 .idea
 **/*.map
 **/app/**/*.js
+package-lock.json
+web_app/public/**

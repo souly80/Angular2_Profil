@@ -12,19 +12,23 @@ import { FooterComponent } from './footer-view/footer.component';
 import { ImpressumComponent } from './impressum-view/impressum.component';
 import { ProfilViewService } from './profil-view/profil-view.service';
 import {VisitCartComponent} from "./visit-card/visit-cart.component";
+import {VisitCartResolver} from "./visit-card/visit-cart.resolver";
 
 
 export const routes: Routes = [
       { path: '', component: MainViewComponent },
       { path: 'projects', component: ProjectViewComponent },
       { path: 'profil', component: ProfilViewComponent },
-      { path: 'contact', component: VisitCartComponent },
+      { path: 'contact', component: VisitCartComponent, resolve: { contactData: VisitCartResolver }},
       { path: 'impressum', component: ImpressumComponent }
 
 ];
 
 export const appRoutingProviders: any[] = [
-      ProjectViewService, ContactService, ProfilViewService
+      ProjectViewService,
+      ContactService,
+      ProfilViewService,
+      VisitCartResolver
 ];
 
 export const appDeklarations: any[] = [
