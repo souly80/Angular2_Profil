@@ -6,11 +6,7 @@ import { Observable } from 'rxjs/Rx';
 @Component({
   selector: 'project-view',
   templateUrl: './project-view.component.html',
-  //styleUrls:["./project-view.css"],
-   styles: [`
-    .even { background: #DC572E; }
-    .odd { background: #7f132d; }
-    `],
+  styleUrls:["./project-view.css"],
   providers: [ProjectViewService],
 })
 export class ProjectViewComponent {

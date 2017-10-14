@@ -5,6 +5,19 @@ export class ProjectViewService {
     getProjects() {
         return [
             {
+                title: "Senior Webentwickler im Bereich R&D",
+                company: "CREALOGIX Group the Leader for Digital Bank Stuttgart",
+                date: 'von 04.2017 bis 09.2017',
+                contents:
+                    [
+                        "Neuentwicklung des Content Management System (CMS) für die Online Banking auf Basis Frontend Technologie (Angular 4) in Kleinen Agile Teams.",
+                        "Entwicklung Komfortabler Benutzeroberfläche in Zusammenarbeit mit UX Spezialisten.",
+                        "Qualitätssicherung durch automatisierte Test (Jasmine,Karma Testrunner).",
+                        "Pflege und Weiterentwicklung bestehender Client Side Portal Anwendung."
+                    ],
+                keys: ["Angular 4, HTML5, Typescript/Javascript, jQuery, Json, Test-Driven Development,Scrum"]
+            },
+            {
                 title: "Softwarearchitekt und Softwareentwickler in der Fertigung",
                 company: "Bosch GmbH FeP/TEF23 in Feuerbach-Stuttgart",
                 date: 'von 07.2015 bis 03.2017',

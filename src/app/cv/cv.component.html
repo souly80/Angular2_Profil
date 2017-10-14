@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
+        <div class="tile purple">
+            <h1><strong>Zeugnisse</strong></h1>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div *ngFor="let certificateData of certificatesData;let odd=odd; let even=even;" class="col-sm-6 col-sm-3" style="border:0px;background-color:rgba(0,0,0,0);">
+        <div class="tile" [ngClass]="{ odd: odd, even: even }">
+            <div style="vertical-align:middle;text-align:center;">
+                <a href="{{certificateData.path}}" target="_blank">
+                    <h1 style="color: #fcab0e">{{certificateData.title}}</h1>
+                    <img src="{{pdfImg}}">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<footer-view></footer-view>
