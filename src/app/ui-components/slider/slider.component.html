@@ -1,0 +1,10 @@
+<div class="carousel">
+    <ul class="slides">
+        <li *ngFor="let sliderInfo of sliderInfos">
+            <div style="vertical-align:middle;text-align:center;">
+                <img src="{{sliderInfo.imageURL}}" style="max-width: 100%;width:auto;height: 100px;">
+                <span class="statement" style="height: calc(100% - 100px);">{{sliderInfo.statement}}</span>
+            </div>
+        </li>
+    </ul>
+</div>

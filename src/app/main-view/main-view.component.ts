@@ -25,8 +25,6 @@ export class MainViewComponent {
     @ViewChild('container')
     public container: ElementRef;
     mainContents: any;
-    public companiesInfos:Array<Object>;
-    public companiesStatements:Array<Object>;
     private skills: any;
     private skill: string;
     private pointer: number = 0;
@@ -34,8 +32,6 @@ export class MainViewComponent {
         this.mainContents = this.mainService.getMainContents();
         this.certificatesData = this.mainService.getCertificatesData();
         this.skills = ["C#", "Java", "JavaScript", "CSS", "AngularJS", "Angular 2", "Typescript", "..."];
-        this.companiesInfos = this.mainService.getCompaniesInfos();
-        this.companiesStatements = this.mainService.getCompaniesStatements();
         Observable.interval(2000)
             .subscribe((x) => {
                 if (this.pointer >= this.skills.length - 1)

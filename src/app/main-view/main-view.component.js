@@ -29,8 +29,6 @@ var MainViewComponent = (function () {
         this.mainContents = this.mainService.getMainContents();
         this.certificatesData = this.mainService.getCertificatesData();
         this.skills = ["C#", "Java", "JavaScript", "CSS", "AngularJS", "Angular 2", "Typescript", "..."];
-        this.companiesInfos = this.mainService.getCompaniesInfos();
-        this.companiesStatements = this.mainService.getCompaniesStatements();
         Rx_1.Observable.interval(2000)
             .subscribe(function (x) {
             if (_this.pointer >= _this.skills.length - 1)

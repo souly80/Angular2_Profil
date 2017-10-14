@@ -35,43 +35,6 @@ export class MainViewService {
         ];
     }
 
-    getCompaniesStatements(){
-        return [
-            {
-                statement:`Herr Herr Zemmouri war ein äußert engagierter Mitarbeiter, der seine Aufgaben jederzeit mit voller Einsatzbereitsschaft erolgreich erfüllte`,
-                companyName:"Bosch GmbH Stuttgart"
-            },
-            {
-                statement:`Zumdem war Herr Zemmouri ein sehr ehrgeiziger und engagierter Mitarbeiter, der stets einen überdurchschnittlichen EInsatz für unser Unternehmen zeigt`,
-                companyName:"Grotz-Beckert"
-            },
-            {
-                statement:`Er zeichnet sich durch eine hohe Motivation, Eigeninitiative, hohe AUffassungsgabe sowie ein Zielorientiertes und effektives Arbeiten aus`,
-                companyName:"Siemens"
-            },
-            {
-                statement:`Alle ihm zugeteilten Aufgaben hat Herr Zemmouri zu unserer vollsten Zufriedenheit erledigt .wir waren mit seinem Leistungen außerodentlich zufrieden`,
-                companyName:"Fauenhofer IPA"
-            },
-            {
-                statement:`Herr Zemmouri verfügt über gute fachliche Kenntnisse. Er beherrschte nach kurzer Zeit den Umgang mit den neuen Tools und Techniken.`,
-                companyName:"Thales"
-            }
-        ];
-    }
-
-    getCompaniesInfos(){
-        return [
-            {imageURL: require('../../../public/images/crealogix.jpg')},
-            {imageURL: require('../../../public/images/bosch.jpg')},
-            {imageURL: require('../../../public/images/groz-beckert.gif')},
-            {imageURL: require('../../../public/images/hs_karlsruhe.png')},
-            {imageURL: require('../../../public/images/frauenhofer.png')},
-            {imageURL: require('../../../public/images/siemens.png')},
-            {imageURL: require('../../../public/images/thales.jpg')}
-        ];
-    }
-
     getMainContents() {
         return [
             {

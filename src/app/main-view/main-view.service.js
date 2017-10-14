@@ -12,16 +12,12 @@ var MainViewService = (function () {
     MainViewService.prototype.getCertificatesData = function () {
         return [
             {
-                title: "Thales",
-                path: "../../../public/files/thales.pdf"
+                title: "Bosch GmbH",
+                path: "../../../public/files/bosch.pdf"
             },
             {
-                title: "Frauenhofer IPA",
-                path: "../../../public/files/frauenhofer.pdf"
-            },
-            {
-                title: "Siemens",
-                path: "../../../public/files/siemens.pdf"
+                title: "Grotz Beckert KG",
+                path: "../../../public/files/groz_beckert.pdf"
             },
             {
                 title: "Diplom",
@@ -32,44 +28,17 @@ var MainViewService = (function () {
                 path: "../../../public/files/noten.pdf"
             },
             {
-                title: "Grotz Beckert KG",
-                path: "../../../public/files/groz_beckert.pdf"
+                title: "Siemens",
+                path: "../../../public/files/siemens.pdf"
             },
             {
-                title: "Bosch GmbH",
-                path: "../../../public/files/bosch.pdf"
-            }
-        ];
-    };
-    MainViewService.prototype.getCompaniesStatements = function () {
-        return [
-            {
-                statement: "Zumdem war Herr Zemmouri ein sehr ehrgeiziger und engagierter Mitarbeiter, der stets einen \u00FCberdurchschnittlichen EInsatz f\u00FCr unser Unternehmen zeigt",
-                companyName: "Grotz-Beckert"
+                title: "Frauenhofer IPA",
+                path: "../../../public/files/frauenhofer.pdf"
             },
             {
-                statement: "Er zeichnet sich durch eine hohe Motivation, Eigeninitiative, hohe AUffassungsgabe sowie ein Zielorientiertes und effektives Arbeiten aus",
-                companyName: "Siemens"
+                title: "Thales",
+                path: "../../../public/files/thales.pdf"
             },
-            {
-                statement: "Alle ihm zugeteilten Aufgaben hat Herr Zemmouri zu unserer vollsten Zufriedenheit erledigt .wir waren mit seinem Leistungen au\u00DFerodentlich zufrieden",
-                companyName: "Fauenhofer IPA"
-            },
-            {
-                statement: "Herr Zemmouri verf\u00FCgt \u00FCber gute fachliche Kenntnisse. Er beherrschte nach kurzer Zeit den Umgang mit den neuen Tools und Techniken.",
-                companyName: "Thales"
-            }
-        ];
-    };
-    MainViewService.prototype.getCompaniesInfos = function () {
-        return [
-            { imageURL: require('../../../public/images/hs_karlsruhe.png') },
-            { imageURL: require('../../../public/images/thales.jpg') },
-            { imageURL: require('../../../public/images/frauenhofer.png') },
-            { imageURL: require('../../../public/images/siemens.png') },
-            { imageURL: require('../../../public/images/groz-beckert.gif') },
-            { imageURL: require('../../../public/images/bosch.jpg') },
-            { imageURL: require('../../../public/images/crealogix.jpg') },
         ];
     };
     MainViewService.prototype.getMainContents = function () {

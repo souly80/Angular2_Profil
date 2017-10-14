@@ -1,4 +1,7 @@
 "use strict";
+require("jquery");
+require("bootstrap/dist/js/bootstrap");
+require("bootstrap/dist/css/bootstrap.css");
 var platform_browser_dynamic_1 = require("@angular/platform-browser-dynamic");
 var core_1 = require("@angular/core");
 var app_module_1 = require("./app/app.module");

@@ -13,6 +13,7 @@ import { ImpressumComponent } from './impressum-view/impressum.component';
 
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import {VisitCartComponent} from "./visit-card/visit-cart.component";
+import {SliderComponent} from "./ui-components/slider/slider.component";
 
 @NgModule({
   imports: [BrowserModule,routing,ChartsModule],
@@ -26,7 +27,8 @@ import {VisitCartComponent} from "./visit-card/visit-cart.component";
       MenuBarComponent,
       FooterComponent,
       ImpressumComponent,
-      VisitCartComponent
+      VisitCartComponent,
+      SliderComponent
   ],
   bootstrap: [AppComponent]
 })

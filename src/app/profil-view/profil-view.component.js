@@ -12,16 +12,16 @@ var core_1 = require("@angular/core");
 var CommonUtils_1 = require("../CommonUtils");
 var profil_view_service_1 = require("./profil-view.service");
 var Rx_1 = require("rxjs/Rx");
+var router_1 = require("@angular/router");
 var ProfilViewComponent = (function () {
-    function ProfilViewComponent(provilViewService) {
+    function ProfilViewComponent(activatedRoute, provilViewService) {
         var _this = this;
+        this.activatedRoute = activatedRoute;
         this.provilViewService = provilViewService;
         this.pointer = 0;
         this.meImg = require('../../../public/images/meProfil.png');
         this.pdfImg = require('../../../public/images/pdf.png');
         this.profilImg = require('../../../public/images/project.jpg');
-        this.trainingsData = this.provilViewService.getTrainingData();
-        this.personalData = this.provilViewService.getPersonalData();
         this.projectList = this.provilViewService.getProjectList();
         this.cvContents = this.provilViewService.getCvContents();
         this.experinceData = this.provilViewService.getExperienceData();
@@ -35,6 +35,14 @@ var ProfilViewComponent = (function () {
             _this.skill = _this.skills[_this.pointer];
         });
     }
+    ProfilViewComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.activatedRoute.data.pluck('profilData')
+            .subscribe(function (data) {
+            _this.trainingsData = data[0];
+            data.personalData = data[1];
+        });
+    };
     ProfilViewComponent.prototype.scrollToBottom = function () {
         CommonUtils_1.CommonUtils.scrollToBottomWithAnimate(0);
     };
@@ -47,7 +55,7 @@ ProfilViewComponent = __decorate([
         providers: [profil_view_service_1.ProfilViewService],
         styleUrls: ['profil.style.css']
     }),
-    __metadata("design:paramtypes", [profil_view_service_1.ProfilViewService])
+    __metadata("design:paramtypes", [router_1.ActivatedRoute, profil_view_service_1.ProfilViewService])
 ], ProfilViewComponent);
 exports.ProfilViewComponent = ProfilViewComponent;
 //# sourceMappingURL=profil-view.component.js.map

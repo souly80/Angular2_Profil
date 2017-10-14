@@ -6,12 +6,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var PersonalData_1 = require("./PersonalData");
+var Observable_1 = require("rxjs/Observable");
 var ProfilViewService = (function () {
     function ProfilViewService() {
     }
     ProfilViewService.prototype.getTrainingData = function () {
-        return [
+        var trainingData = [
+            {
+                title: "JavaScript Day 2017",
+                path: "../../../public/files/javascript_Day_2017.JPG"
+            },
             {
                 title: "AngularJS und Javascript Intensiv-Workshop",
                 path: "../../../public/files/angularJS.pdf"
@@ -29,18 +33,27 @@ var ProfilViewService = (function () {
                 path: "../../../public/files/ppedv.pdf"
             }
         ];
+        return Observable_1.Observable.create(function (observer) {
+            observer.next(trainingData);
+            observer.complete();
+        });
     };
     ProfilViewService.prototype.getPersonalData = function () {
-        var retValue = new Array();
-        var pd = new PersonalData_1.PersonalData();
-        pd.tdName = "Name";
-        pd.tdValue = "Soulaymane Zemmouri";
-        retValue.push(pd);
-        pd = new PersonalData_1.PersonalData();
-        pd.tdName = "Geburtsdatum";
-        pd.tdValue = "03.08.1980";
-        retValue.push(pd);
-        return retValue;
+        var data = new Array();
+        var pd = {
+            tdName: "Name",
+            tdValue: "Soulaymane Zemmouri"
+        };
+        data.push(pd);
+        pd = {
+            tdName: "Geburtsdatum",
+            tdValue: "03.08.1980"
+        };
+        data.push(pd);
+        return Observable_1.Observable.create(function (observer) {
+            observer.next(data);
+            observer.complete();
+        });
     };
     ProfilViewService.prototype.getExperienceData = function () {
         return [
