@@ -1,0 +1,39 @@
+.expander-headers-align .mat-expansion-panel-header-title,
+.expander-headers-align .mat-expansion-panel-header-description {
+    flex-basis: 0;
+}
+
+.expander-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image_full{
+    display:block;
+}
+
+.image_mobile{
+    display:none;
+}
+
+@media (max-width: 480px) {
+    #project-description {
+        font-size: 13px;
+    }
+    .image_full{
+        display:none;
+    }
+    .image_mobile{
+        display:block;
+    }
+}
+@media (min-width: 480px) and (max-width: 1080px) {
+    #project-description {
+        font-size: 14px;
+    }
+}
+@media (min-width: 1080px) {
+    #project-description {
+        font-size: 16px;
+    }
+}

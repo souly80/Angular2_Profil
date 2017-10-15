@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
+import {IProjectData} from "./project-view.interface";
 
 @Injectable()
 export class ProjectViewService {
-    getProjects() {
+    getProjectData(): IProjectData[] {
         return [
             {
                 title: "Senior Webentwickler im Bereich R&D",
                 company: "CREALOGIX Group the Leader for Digital Bank Stuttgart",
-                date: 'von 04.2017 bis 09.2017',
+                date: '04.2017-09.2017',
                 contents:
                     [
                         "Neuentwicklung des Content Management System (CMS) für die Online Banking auf Basis Frontend Technologie (Angular 4) in Kleinen Agile Teams.",
@@ -16,11 +17,11 @@ export class ProjectViewService {
                         "Pflege und Weiterentwicklung bestehender Client Side Portal Anwendung."
                     ],
                 keys: ["Angular 4, HTML5, Typescript/Javascript, jQuery, Json, Test-Driven Development,Scrum"]
-            },
+            } as IProjectData,
             {
                 title: "Softwarearchitekt und Softwareentwickler in der Fertigung",
                 company: "Bosch GmbH FeP/TEF23 in Feuerbach-Stuttgart",
-                date: 'von 07.2015 bis 03.2017',
+                date: '07.2015-03.2017',
                 contents:
                 [
                     "Entwicklung und Betrieb von Anzeigesystemen zur Visualisierung von Betriebszuständen und Performance-Daten im internationalen Fertigungsverbund der CP4-Produktion.",
@@ -32,11 +33,11 @@ export class ProjectViewService {
 
                 ],
                 keys: ["AngularJS/Angular2,Typescript,C# ASP.NET WEBAPI,Oracle/MS SQL, Microservices,Industrie 4.0,MES"]
-            },
+            } as IProjectData,
             {
                 title: "Produktsoftware Entwickler",
                 company: "Bosch GmbH CC/ESM1 in Leonberg",
-                date: 'von 10.2012 bis 06.2015',
+                date: '10.2012-06.2015',
                 contents:
                 [
                     "Implementierung Serverseitige Webanwendung mit Vaadin Framework (Java MVP CSS)",
@@ -53,11 +54,11 @@ export class ProjectViewService {
 
                 ],
                 keys: ["Java,Maven,Vaadin,C# .NET WPF,REST,WCF,MS Visual Studio 2010,Eclipse"]
-            },
+            } as IProjectData,
             {
                 title: "Softwareentwickler",
                 company: "Grotz-Beckert KG in Albstadt",
-                date: 'von 05.2008 bis 10.2012',
+                date: '05.2008-10.2012',
                 contents:
                 [
                     "Machbarkeitsuntersuchung von Bildverarbeitungssysteme",

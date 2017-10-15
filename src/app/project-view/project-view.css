@@ -39,14 +39,23 @@
     #container div {
         max-width: 98%;
     }
+    #project-content span {
+        font-size: 13px;
+    }
 }
 @media (min-width: 480px) and (max-width: 1080px) {
     #container div {
         max-width: 48%;
     }
+    #project-content span {
+        font-size: 14px;
+    }
 }
 @media (min-width: 1080px) {
     #container div {
         max-width: 23%;
+    }
+    #project-content span {
+        font-size: 16px;
     }
 }

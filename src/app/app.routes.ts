@@ -15,6 +15,7 @@ import {VisitCartComponent} from "./visit-card/visit-cart.component";
 import {VisitCartResolver} from "./visit-card/visit-cart.resolver";
 import {ProfilViewResolver} from "./profil-view/provil-view.resolver";
 import {SliderComponent} from "./ui-components/slider/slider.component";
+import {ExpanderComponent} from "./ui-components/expander/expander.component";
 
 
 export const routes: Routes = [
@@ -38,7 +39,8 @@ export const appDeklarations: any[] = [
       AppComponent, MenuBarComponent, ProjectViewComponent, MainViewComponent,
       ProfilViewComponent, ContactComponent, FooterComponent, ImpressumComponent,
       VisitCartComponent,
-      SliderComponent
+      SliderComponent,
+      ExpanderComponent
 ];
 
 export const routing = RouterModule.forRoot(routes, {useHash: true});

@@ -21,12 +21,29 @@
 <div class="row">
     <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
          <div class="tile purple">
-            <h1><strong>Projeckte</strong></h1>
+            <h1><strong>Projekte</strong></h1>
             <strong>im Folgenden sind meine erfolgreichte Projekte aufgelistet:</strong>
         </div>
     </div>
 </div>
-<div id="container">
+<div *ngFor="let projectData of projectsData;">
+    <expander-component
+            style="margin: 5px;"
+            [projectIcon]="projectIcon"
+            [projectIconMobile]="projectIconMobile"
+            [title]="projectData.date"
+            [descriptionToggled]="projectData.title"
+            [descriptionHidden]="projectData.title">
+        <span id="project-content" style="color: #3F88C5;line-height: 200%;">
+                <span *ngFor="let content of projectData.contents">
+                    <img src="{{right_chevron}}">
+                    <span>{{content}} </span>
+                    <br>
+                </span>
+        </span>
+    </expander-component>
+</div>
+<!--div id="container">
     <div *ngFor="let projectData of projectsData;let odd=odd; let even=even;" style="border:0px;">
         <span style="background: whitesmoke" class="tile">
             <span style="vertical-align:middle;text-align:center;color: #fcab0e">
@@ -45,5 +62,6 @@
             </span>
         </span>
     </div>
-</div>
+</div-->
+
 <footer-view></footer-view>

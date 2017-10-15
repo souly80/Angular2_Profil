@@ -1,0 +1,15 @@
+<mat-accordion class="expander-headers-align">
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title style="color: blue;">
+                {{title}}
+            </mat-panel-title>
+            <mat-panel-description id="project-description" style="color: green;">
+                {{descriptionHidden}}
+            </mat-panel-description>
+            <img class="image_full" style="margin-right: 10px;" src="{{projectIcon}}">
+            <img class="image_mobile" style="height: 100%;margin-right: 10px;" src="{{projectIconMobile}}">
+        </mat-expansion-panel-header>
+        <ng-content></ng-content>
+    </mat-expansion-panel>
+</mat-accordion>

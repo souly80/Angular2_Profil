@@ -5,3 +5,15 @@ main {
   margin-top: 50px;
   display: block;
 }
+.main_app {
+  max-width: 1200px;
+  margin: auto;
+  border: 5px solid whitesmoke;
+  border-radius: 10px;
+}
+
+body, html {
+  background: red;
+  font-size: 14px;
+  min-width: 285px;
+}
