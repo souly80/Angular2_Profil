@@ -8,7 +8,7 @@ export class ProjectViewService {
             {
                 title: "Senior Webentwickler im Bereich R&D",
                 company: "CREALOGIX Group the Leader for Digital Bank Stuttgart",
-                date: '04.2017-09.2017',
+                date: 'seit 04.2017',
                 contents:
                     [
                         "Neuentwicklung des Content Management System (CMS) für die Online Banking auf Basis Frontend Technologie (Angular 4) in Kleinen Agile Teams.",
