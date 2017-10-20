@@ -22,7 +22,7 @@ export class ProjectViewComponent {
   projectsData: IProjectData[];
   constructor(private projectViewService: ProjectViewService) {
     this.projectsData = this.projectViewService.getProjectData();
-    this.skills = ["Industrie 4.0", "IoT", "Manufacturing Execution System", "Bildverarbeitingsysteme", "Application Lifecycle Management", "..."];
+    this.skills = ["Industrie 4.0", "IoT", "Manufacturing Execution System", "Bildverarbeitungsysteme", "Application Lifecycle Management", "..."];
     Observable.interval(2000)
       .subscribe((x) => {
         if (this.pointer >= this.skills.length - 1)
@@ -31,9 +31,5 @@ export class ProjectViewComponent {
           this.pointer++;
         this.skill = this.skills[this.pointer];
       });
-  }
-
-  public scrollToBottom() {
-    CommonUtils.scrollToBottomWithAnimate(0);
   }
 } 

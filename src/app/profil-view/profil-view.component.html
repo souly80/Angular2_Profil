@@ -1,4 +1,4 @@
-<div class="fill" [style.background-image]="'url(' + profilImg + ')'">
+<div style="height: 275px;" class="fill" [style.background-image]="'url(' + profilImg + ')'">
     <div class="textOverImage">
         <div style="margin-left: 10px">
             <h2>IT Freelancer: Soulaymane Zemmouri</h2>
@@ -10,9 +10,6 @@
                 <h2>Informationen ist nur, was verstanden wird. (Card Friedrich)</h2>
             </div>
         </div>
-        <!--div (click)="scrollToBottom()" class="rightBottomDiv">
-            <span class="glyphicon glyphicon-circle-arrow-down"></span>
-        </div-->
     </div>
 </div>
 <div class="scroll-box row match-my-cols">
@@ -48,10 +45,100 @@
         </p>
     </div>
 </div>
-<div>
+
+<div class="row">
+    <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
+        <div class="tile purple">
+            <h1><strong>Berufserfahrungen</strong></h1>
+        </div>
+    </div>
+</div>
+<table-component class="profil-content" [displayedColumns]="displayedColumns" [data]="profilData">
+</table-component>
+
+
+<div class="row">
+    <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
+        <div class="tile purple">
+            <h1><strong>Schulung</strong></h1>
+        </div>
+    </div>
+</div>
+<table-component [displayedColumns]="displayedColumns" [data]="trainingsData"></table-component>
+
+
+<div class="row">
+    <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
+        <div class="tile purple">
+            <h1><strong>Studium</strong></h1>
+        </div>
+    </div>
+</div>
+<table-component [displayedColumns]="displayedColumns" [data]="studiesData"></table-component>
+
+
+<div class="row">
+    <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
+        <div class="tile purple">
+            <h1><strong>Praktikum</strong></h1>
+        </div>
+    </div>
+</div>
+<table-component [displayedColumns]="displayedColumns" [data]="intershipsData"></table-component>
+
+
+<div class="row">
+    <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
+        <div class="tile purple">
+            <h1><strong>Schulbildung</strong></h1>
+        </div>
+    </div>
+</div>
+<table-component [displayedColumns]="displayedColumns" [data]="educationData"></table-component>
+
+
+<div class="row">
+    <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
+        <div class="tile purple">
+            <h1><strong>Kenntnisse</strong></h1>
+        </div>
+    </div>
+</div>
+<table-component [displayedColumns]="displayedColumns" [data]="experinceData"></table-component>
+
+
+<div class="row">
+    <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
+        <div class="tile purple">
+            <h1><strong>Sprachen</strong></h1>
+        </div>
+    </div>
+</div>
+<table-component [displayedColumns]="displayedColumns" [data]="languageKnowledgeData"></table-component>
+
+
+<div class="row">
+    <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
+        <div class="tile purple">
+            <h1><strong>Soziale Fähigkeiten und Kompetenzen</strong></h1>
+        </div>
+    </div>
+</div>
+<table-component [displayedColumns]="displayedColumns" [data]="socialSkillsData"></table-component>
+
+
+<div class="row">
+    <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
+        <div class="tile purple">
+            <h1><strong>Hobby</strong></h1>
+        </div>
+    </div>
+</div>
+<table-component [displayedColumns]="displayedColumns" [data]="hobiesData"></table-component>
+<!--div>
     <h2>Projektliste</h2>
     <table>
-        <template let-group ngFor [ngForOf]="projectList">
+        <template let-group ngFor [ngForOf]="profilData">
             <tr>
                 <td>Zeitraum</td>
                 <td>{{group.periode}}</td>
@@ -116,9 +203,9 @@
             </div>
         </div>
     </div>
-</div>
-<hr>
-<div class="row">
+</div-->
+
+<!--div class="row">
     <div *ngFor="let trainingData of trainingsData;let odd=odd; let even=even;" class="col-sm-6 col-sm-3" style="border:0px;background-color:rgba(0,0,0,0);">
         <div class="tile" [ngClass]="{ odd: odd, even: even }">
             <div style="vertical-align:middle;text-align:center;">
@@ -129,5 +216,5 @@
             </div>
         </div>
     </div>
-</div>
+</div-->
 <footer-view></footer-view>

@@ -18,13 +18,13 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 //material
 
 import {
-    MatExpansionModule,
+    MatExpansionModule, MatTableModule,
 } from '@angular/material';
 
 //material
 
 @NgModule({
-  imports: [BrowserModule,routing,ChartsModule,MatExpansionModule,BrowserAnimationsModule],
+  imports: [BrowserModule,routing,ChartsModule,MatExpansionModule,BrowserAnimationsModule,MatTableModule],
   declarations: [appDeklarations],
   providers: [appRoutingProviders],
   entryComponents: [

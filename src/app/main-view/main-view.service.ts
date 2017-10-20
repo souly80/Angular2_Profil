@@ -46,7 +46,7 @@ export class MainViewService {
             für moderne Webanwendungen.
             Ich habe mich auf die Programmierung von C#/Java Backend Service für agile Softwareentwicklung nach Scrum spezialisiert 
             und habe bereits eine Reihe von Projekten erfolgreich umgesetzt.
-            Als weitere Tätigkeitsschwerpunkte sind die Webbasierten Fronend Anwendungen Javascript/Typescript und Angular 2 zu nennen.
+            Als weitere Tätigkeitsschwerpunkte sind die Webbasierten Frontend Anwendungen Javascript/Typescript und Angular 2 zu nennen.
             Ich bin mit dem TFS vertraut und verwalte
             die Backlogs für einige Projekte.
                 `
@@ -56,7 +56,7 @@ export class MainViewService {
                 imageURL: require('../../../public/images/zukunft.png'),
                 content: `
                 Durch die diversen Aufgaben, die ich während einiger Projekte bereits erfolgreich bearbeitete, 
-                habe ich einen breiten Einblick in das Softwarearchitektur und unterschiedliche Lösungsansätze kennen gelernt. 
+                habe ich einen breiten Einblick in die Softwarearchitektur und unterschiedlichen Lösungsansätze kennen gelernt. 
                 Als freier Softwareentwickler bin ich stets auf der Suche nach interessanten und herausfordernden neuen Projekten.               
                 Zur Zeit bevorzuge ich freiberufliche Mitarbeit. Eine Festanstellung kommt
                 für mich nur bedingt in Betracht.
@@ -69,7 +69,7 @@ export class MainViewService {
                 Aus meinem Lebenslauf Können Sie ersehen, dass ich darüber hinaus Erfahrung in Bildverarbeitungssystemen für Produktionsanlagen.
                 Meine bisherigen Tätigkeiten waren die technische Betreuung der Einführung des ALM (Application Lifecycle Management) Systems 
                 , Entwurf, Implementierung und Test von Tools/scripts mit Einsatz von Eclipse Java und Vaadin (Web Framework). 
-                Weiterentwicklung des MES (Manufacturing Execution System) Schnittstelle zu Maschinen und Produktionsdatenbank (Industrie 4.0)                   
+                Weiterentwicklung der MES Schnittstelle (Manufacturing Execution System) zu Maschinen und Produktionsdatenbank (Industrie 4.0)                   
                 `
             }
         ];

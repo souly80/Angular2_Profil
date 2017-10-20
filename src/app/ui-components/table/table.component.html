@@ -1,0 +1,26 @@
+<div class="example-container mat-elevation-z8">
+    <mat-table #table [dataSource]="dataSource">
+
+        <ng-container matColumnDef="Zeitraum">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.key}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="Arbeitsgeber">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let element">
+                <div [ngSwitch]="element.tableContentType">
+                    <div *ngSwitchCase="tableEntries.profilTable">
+                        <profil-content [profilData]="element"></profil-content>
+                    </div>
+                    <div *ngSwitchCase="tableEntries.contentValueTable">
+                        <training-content [trainingData]="element"></training-content>
+                    </div>
+                </div>
+            </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+</div>

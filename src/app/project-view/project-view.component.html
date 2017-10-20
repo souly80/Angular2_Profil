@@ -1,4 +1,4 @@
-<div style="margin:1px; padding:5px;" class="fill" [style.background-image]="'url(' + projectImg + ')'">
+<div style="margin:1px; padding:5px; height: 275px;" class="fill" [style.background-image]="'url(' + projectImg + ')'">
     <video style="opacity: 0.5;width:100%;height:100%;" controls autoplay loop="loop" muted >
         <source src="{{videoPath}}" type="video/mp4">
     </video>
@@ -13,9 +13,6 @@
                 <h2>In der Informatik geht es genau so wenig um Computer, wie in der Astronomie um Teleskope</h2>
             </div>
         </div>
-        <!--div (click)="scrollToBottom()" class="rightBottomDiv">
-            <span class="glyphicon glyphicon-circle-arrow-down"></span>
-        </div-->
     </div>
 </div>
 <div class="row">
@@ -34,7 +31,7 @@
             [title]="projectData.date"
             [descriptionToggled]="projectData.title"
             [descriptionHidden]="projectData.title">
-        <span id="project-content" style="color: #3F88C5;line-height: 200%;">
+        <span class="project-content" style="color: #3F88C5;line-height: 200%;">
                 <span *ngFor="let content of projectData.contents">
                     <img src="{{right_chevron}}">
                     <span>{{content}} </span>

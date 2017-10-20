@@ -24,19 +24,19 @@ export class SliderComponent {
             },
             {
                 statement:`Herr Zemmouri ist für die Position als Softwareentwickler auf Basis von .NET und Angular sehr gut geeignet
-                und ich empfehle eine Beschäftigung in diesem Bereich, weil dies seinen Fähigkeiten in einem hohem Grade entspricht.`,
+                und ich empfehle eine Beschäftigung in diesem Bereich, weil dies seinen Fähigkeiten in einem hohen Grade entspricht.`,
                 imageURL: require('../../../../public/images/bosch.jpg')
             },
             {
-                statement:`Zumdem war Herr Zemmouri ein sehr ehrgeiziger und engagierter Mitarbeiter, der stets einen überdurchschnittlichen EInsatz für unser Unternehmen zeigt.`,
+                statement:`Zudem war Herr Zemmouri ein sehr ehrgeiziger und engagierter Mitarbeiter, der stets einen überdurchschnittlichen Einsatz für unser Unternehmen zeigt.`,
                 imageURL: require('../../../../public/images/groz.beckert.jpg')
             },
             {
-                statement:`Er zeichnet sich durch eine hohe Motivation, Eigeninitiative, hohe AUffassungsgabe sowie ein Zielorientiertes und effektives Arbeiten aus.`,
+                statement:`Er zeichnete sich durch eine hohe Motivation, Eigeninitiative, hohe Auffassungsgabe sowie ein Zielorientiertes und effektives Arbeiten aus.`,
                 imageURL: require('../../../../public/images/siemens.jpg')
             },
             {
-                statement:`Alle ihm zugeteilten Aufgaben hat Herr Zemmouri zu unserer vollsten Zufriedenheit erledigt .wir waren mit seinem Leistungen außerodentlich zufrieden.`,
+                statement:`Alle ihm zugeteilten Aufgaben hat Herr Zemmouri zu unserer vollsten Zufriedenheit erledigt. Wir waren mit seinen Leistungen außerodentlich zufrieden.`,
                 imageURL: require('../../../../public/images/frauenhofer.jpg')
             },
             {
