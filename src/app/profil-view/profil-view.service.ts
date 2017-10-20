@@ -1,46 +1,12 @@
 import { Injectable } from '@angular/core';
 import {
-    IContentValue, IPersonalData, IProfilData, ITrainingDonwloadData,
+    IContentValue, IPersonalData, IProfilData,
     TableContentType
 } from "./profil-view.interface";
 import {Observable} from "rxjs/Observable";
 
 @Injectable()
 export class ProfilViewService {
-
-    public getTrainingResource(): Observable<ITrainingDonwloadData[]>{
-        let trainingData = [
-            {
-                title:`JavaScript Day 2017`,
-                path:"../../../public/files/javascript_Day_2017.JPG",
-                tableContentType: TableContentType.CONTENTVALUE_TABLE
-            },
-            {
-                title:`AngularJS und Javascript Intensiv-Workshop`,
-                path:"../../../public/files/angularJS.pdf",
-                tableContentType: TableContentType.CONTENTVALUE_TABLE
-            },
-            {
-                title:`MVTec Halcon Bildverarbeitung`,
-                path:"../../../public/files/mvtec.pdf",
-                tableContentType: TableContentType.CONTENTVALUE_TABLE
-            },
-            {
-                title:`Basta .NET Konferenz`,
-                path:"../../../public/files/basta.pdf",
-                tableContentType: TableContentType.CONTENTVALUE_TABLE
-            },
-            {
-                title:`WPF .NET 4`,
-                path:"../../../public/files/ppedv.pdf",
-                tableContentType: TableContentType.CONTENTVALUE_TABLE
-            }
-        ];
-        return Observable.create((observer:any)=> {
-            observer.next(trainingData);
-            observer.complete();
-        });
-    }
 
     public getPersonalData(): Observable<IPersonalData[]> {
         let data = new Array<IPersonalData>();

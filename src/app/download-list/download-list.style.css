@@ -1,0 +1,45 @@
+.download-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.download-title {
+    width: 60%;
+    padding-right: 20px;
+}
+
+.download-date{
+    width: 25%;
+}
+
+.download-icon {
+    float: left;
+}
+
+@media (max-width: 480px) {
+    .download-container {
+        font-size: 13px;
+    }
+}
+@media (min-width: 480px) and (max-width: 1080px) {
+    .download-container {
+        font-size: 14px;
+    }
+}
+@media (min-width: 1080px) {
+    .download-container {
+        font-size: 16px;
+    }
+}
+
+hr {
+    border-top: 1px dotted #8c8b8b;
+    margin-left: 10px;
+    margin-right: 10px;
+}

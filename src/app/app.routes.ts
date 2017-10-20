@@ -18,6 +18,9 @@ import {ExpanderComponent} from "./ui-components/expander/expander.component";
 import {TableComponent} from "./ui-components/table/table.component";
 import {ProfilContentComponent} from "./profil-view/table-content/profil-content.component/profil-content.component";
 import {TrainingContentComponent} from "./profil-view/table-content/training-content.component/training-content.component";
+import {DownloadListService} from "./download-list/download-list.service";
+import {DownloadListComponent} from "./download-list/download-list.component";
+import {DownloadListResolver} from "./download-list/download-list.resolve";
 
 
 export const routes: Routes = [
@@ -25,6 +28,7 @@ export const routes: Routes = [
       { path: 'projects', component: ProjectViewComponent },
       { path: 'profil', component: ProfilViewComponent, resolve: {profilData: ProfilViewResolver } },
       { path: 'contact', component: VisitCartComponent, resolve: { contactData: VisitCartResolver }},
+      { path: 'download', component: DownloadListComponent, resolve: { downloadListData: DownloadListResolver }},
       { path: 'impressum', component: ImpressumComponent }
 
 ];
@@ -33,7 +37,9 @@ export const appRoutingProviders: any[] = [
       ProjectViewService,
       ProfilViewService,
       VisitCartResolver,
-      ProfilViewResolver
+      ProfilViewResolver,
+      DownloadListService,
+      DownloadListResolver
 ];
 
 export const appDeklarations: any[] = [
@@ -44,7 +50,8 @@ export const appDeklarations: any[] = [
       ExpanderComponent,
       TableComponent,
       ProfilContentComponent,
-      TrainingContentComponent
+      TrainingContentComponent,
+      DownloadListComponent
 ];
 
 export const routing = RouterModule.forRoot(routes, {useHash: true});

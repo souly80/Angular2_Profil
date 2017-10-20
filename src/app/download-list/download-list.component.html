@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
+        <div class="tile purple">
+            <h1><strong>Schulung</strong></h1>
+        </div>
+    </div>
+</div>
+<mat-list *ngFor="let downloadItem of downloadListData">
+    <mat-list-item>
+        <a target="_blank" class="download-container" href="{{downloadItem.path}}">
+            <div class="download-title">{{downloadItem.title}} </div>
+            <div class="download-date">{{downloadItem.date}} </div>
+            <img src="{{downloadItem.iconPath}}" class="download-icon">
+        </a>
+    </mat-list-item>
+    <hr>
+</mat-list>
+
+<mat-tab-group>
+    <mat-tab label="Tab 1">Content 1</mat-tab>
+    <mat-tab label="Tab 2">Content 2</mat-tab>
+</mat-tab-group>

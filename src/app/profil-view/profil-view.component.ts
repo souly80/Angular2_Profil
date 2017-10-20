@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import { CommonUtils } from '../CommonUtils';
 import { ProfilViewService } from './profil-view.service';
 import { Observable } from 'rxjs/Rx';
-import {IContentValue, IPersonalData, IProfilData, ITrainingDonwloadData} from "./profil-view.interface";
+import {IContentValue, IPersonalData, IProfilData} from "./profil-view.interface";
 import {ActivatedRoute} from "@angular/router";
 
 @Component({

@@ -11,11 +11,6 @@ export interface IContentValue extends  IContentType{
     value: Array<string>;
 }
 
-export interface ITrainingDonwloadData extends IContentType {
-    title: string;
-    path: string;
-}
-
 export interface IPersonalData extends IContentType {
     tdName:string;
     tdValue:string;
