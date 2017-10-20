@@ -11,12 +11,10 @@ export class DownloadListResolver implements Resolve<any> {
     constructor(private downloadListService: DownloadListService) {
     }
 
-    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<ITrainingDonwloadData[]>{
-        return Observable.create((observer:any) => {
-           this.downloadListService.getTrainingResource().subscribe(data => {
-               observer.next(data);
-               observer.complete();
-           });
-        });
+    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any[]>{
+        return Observable.forkJoin(
+            this.downloadListService.getTrainingResource(),
+            this.downloadListService.getCVResource()
+        );
     }
 }

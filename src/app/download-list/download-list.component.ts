@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {ITrainingDonwloadData} from "./download-list.interface";
+import {IDownloadData, ITrainingDonwloadData} from "./download-list.interface";
 
 @Component({
     selector: 'download-list',
@@ -8,14 +8,16 @@ import {ITrainingDonwloadData} from "./download-list.interface";
     styleUrls: ['./download-list.style.css']
 })
 export class DownloadListComponent implements  OnInit {
-    public downloadListData: ITrainingDonwloadData[];
+    public trainingsData: ITrainingDonwloadData[];
+    public cvData: IDownloadData[];
 
     constructor(private activatedRoute: ActivatedRoute) {
     }
 
     ngOnInit(): void {
         this.activatedRoute.data.pluck('downloadListData').subscribe((data: any)=> {
-            this.downloadListData = data;
+            this.trainingsData = data[0];
+            this.cvData = data[1];
         });
     }
 }
