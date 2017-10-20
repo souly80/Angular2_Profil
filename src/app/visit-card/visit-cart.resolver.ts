@@ -7,12 +7,13 @@ export class VisitCartResolver implements Resolve<IVisitCart> {
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<IVisitCart> {
         let data = {
             name: "Soulaymane Zemmouri",
-            available: true,
+            available: false,
             description: "Senior Software Entwickler",
             passion: "Fullstack Entwickler von moderne Webanwendungen",
             technologie: "Angular, ASP.NET und C#",
             title: "IT Freelancer: Soulaymane Zemmouri",
             phoneNumber: "Telefon: +49 176-60362011",
+            availableFrom: "01.04.2017",
             localtion: "Wohnsitz in Stuttgart"
         } as IVisitCart;
         return Observable.create((observer: any)=>{

@@ -139,6 +139,11 @@ export class ProfilViewService {
         return Observable.create((observer: any) => {
             let data = [
                 {
+                    key: "09.10.2017-11.10.2017",
+                    value: "JavaScript Day 2017 in Berlin",
+                    tableContentType: TableContentType.CONTENTVALUE_TABLE
+                },
+                {
                     key: "06.07.2017",
                     value: "Java Forum Stuttgart",
                     tableContentType: TableContentType.CONTENTVALUE_TABLE
@@ -251,11 +256,16 @@ export class ProfilViewService {
             let data = [
 
                 {
-                    key: "04/2017 - 09/2017",
+                    key: "seit 04/2017",
                     "company": "CREALOGIX Group - The Leader for the Digital Bank in Stuttgart",
                     "art": "Senior Web Entwickler",
                     "realisation": `HTML5, Angular 2,Foundation/Bootstrap,CSS,Javascript/Typescript`,
-                    "tasks": ["Analyse, Design, Implementierung Online-Banking Software"],
+                    "tasks": [
+                        "Neuentwicklung des Content Management System (CMS) für die Online Banking auf Basis Frontend Technologie (Angular 4) in Kleinen Agile Teams",
+                        "Entwicklung Komfortabler Benutzeroberfläche in Zusammenarbeit mit UX Spezialisten",
+                        "Qualitätssicherung durch automatisierte Test (Jasmine,Karma Testrunner)",
+                        "Pflege und Weiterentwicklung bestehender Client Side Portal Anwendung"
+                    ],
                     tableContentType: TableContentType.PROFIL_TABLE
                 } as IProfilData,
                 {

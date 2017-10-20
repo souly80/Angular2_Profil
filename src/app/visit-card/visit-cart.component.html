@@ -5,8 +5,15 @@
         </span>
 
         <h1 class="name">{{ contactData.name }}</h1>
-        <span class="label label-success text_small vcenter">verfügbar</span>
-
+        <div *ngIf="contactData.available; then templateAvailable else templateNotAvailable"></div>
+        <ng-template #templateAvailable>
+            <span class="label label-success text_small vcenter">verfügbar</span>
+        </ng-template>
+        <ng-template #templateNotAvailable>
+            <span class="label label-danger text_small vcenter">nicht verfügbar</span>
+            <br>
+            <span>verfügbar ab {{contactData.availableFrom}}</span>
+        </ng-template>
         <p class="description">{{ contactData.description }}</p>
         <p class="passion">{{ contactData.passion }}</p>
 

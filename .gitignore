@@ -2,6 +2,6 @@
 .git
 .idea
 **/*.map
-**/app/**/*.js
+src/**/*.js
 package-lock.json
 web_app/public/**
