@@ -46,9 +46,9 @@ html,body{
 .PanelBox{
     margin: 10px;
     position:absolute;
-    bottom:100px;
+    bottom:5%;
     right:0;
-    width: 60%; 
+    /*width: 60%;*/
     height:15%;
 }
 
@@ -137,13 +137,13 @@ my-app:empty + .loading {
   margin-top: 0px;
 }
 .tile.purple, .tile.blue, .tile.red, .tile.orange, .tile.green {
-  color: #fff;
+  color: #fcab0e;
 }
 .tile.purple {
-  background: #5133AB;
+  background: #222;
 }
 .tile.purple:hover {
-  background: #3e2784;
+  background: #222;
 }
 .tile.red {
   background: #AC193D;

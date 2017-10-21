@@ -7,7 +7,7 @@
         </div>
         <div class="panelInfo PanelBox panel panel-info">
             <div class="panel-heading">
-                <h2>Informationen ist nur, was verstanden wird. (Card Friedrich)</h2>
+                <span>Informationen ist nur, was verstanden wird. (Card Friedrich)</span>
             </div>
         </div>
     </div>
@@ -49,7 +49,7 @@
 <div class="row">
     <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
         <div class="tile purple">
-            <h1><strong>Berufserfahrungen</strong></h1>
+            <h2>Berufserfahrungen</h2>
         </div>
     </div>
 </div>
@@ -60,7 +60,7 @@
 <div class="row">
     <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
         <div class="tile purple">
-            <h1><strong>Schulung</strong></h1>
+            <h2>Schulung</h2>
         </div>
     </div>
 </div>
@@ -70,7 +70,7 @@
 <div class="row">
     <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
         <div class="tile purple">
-            <h1><strong>Studium</strong></h1>
+            <h2>Studium</h2>
         </div>
     </div>
 </div>
@@ -80,7 +80,7 @@
 <div class="row">
     <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
         <div class="tile purple">
-            <h1><strong>Praktikum</strong></h1>
+            <h2>Praktikum</h2>
         </div>
     </div>
 </div>
@@ -90,7 +90,7 @@
 <div class="row">
     <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
         <div class="tile purple">
-            <h1><strong>Schulbildung</strong></h1>
+            <h2>Schulbildung</h2>
         </div>
     </div>
 </div>
@@ -100,7 +100,7 @@
 <div class="row">
     <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
         <div class="tile purple">
-            <h1><strong>Kenntnisse</strong></h1>
+            <h2>Kenntnisse</h2>
         </div>
     </div>
 </div>
@@ -110,7 +110,7 @@
 <div class="row">
     <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
         <div class="tile purple">
-            <h1><strong>Sprachen</strong></h1>
+            <h2>Sprachen</h2>
         </div>
     </div>
 </div>
@@ -120,7 +120,7 @@
 <div class="row">
     <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
         <div class="tile purple">
-            <h1><strong>Soziale Fähigkeiten und Kompetenzen</strong></h1>
+            <h2>Soziale Fähigkeiten und Kompetenzen</h2>
         </div>
     </div>
 </div>
@@ -130,91 +130,9 @@
 <div class="row">
     <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
         <div class="tile purple">
-            <h1><strong>Hobby</strong></h1>
+            <h2>Hobby</h2>
         </div>
     </div>
 </div>
 <table-component [displayedColumns]="displayedColumns" [data]="hobiesData"></table-component>
-<!--div>
-    <h2>Projektliste</h2>
-    <table>
-        <template let-group ngFor [ngForOf]="profilData">
-            <tr>
-                <td>Zeitraum</td>
-                <td>{{group.periode}}</td>
-            </tr>
-            <tr>
-                <td>Arbeitsgeber</td>
-                <td>{{group.company}}</td>
-            </tr>
-            <tr>
-                <td>Bezeichnung</td>
-                <td>{{group.art}}</td>
-            </tr>
-            <tr>
-                <td>Realisation</td>
-                <td>{{group.realisation}}</td>
-
-            </tr>
-            <tr>
-                <td>Aufgabenbescheribung</td>
-                <td>
-                    <template let-task ngFor [ngForOf]="group.tasks">
-                        <div class="container">* {{task}}</div>
-                        <br/>
-                    </template>
-                </td>
-
-            </tr>
-            <hr>
-        </template>
-    </table>
-
-    <div *ngFor="let cvContent of cvContents">
-        <h2>{{cvContent.title}}</h2>
-        <table>
-            <template let-trainingData ngFor [ngForOf]="cvContent.trainingsList">
-                <tr>
-                    <td>{{trainingData.periode}}</td>
-                    <td>{{trainingData.training}}</td>
-                </tr>
-            </template>
-        </table>
-    </div>
-    <br/>
-    <table>
-        <template let-expData ngFor [ngForOf]="experinceData">
-            <tr>
-                <td style="font-weight: bold;">{{expData.title}}</td>
-                <td>
-                    <template let-content ngFor [ngForOf]="expData.contents">
-                        {{content}}
-                        <br/>
-                    </template>
-                </td>
-            </tr>
-        </template>
-    </table>
-    <hr>
-    <div class="row">
-        <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
-            <div class="tile purple">
-                <h1><strong>Zertifikate</strong></h1>
-            </div>
-        </div>
-    </div>
-</div-->
-
-<!--div class="row">
-    <div *ngFor="let trainingData of trainingsData;let odd=odd; let even=even;" class="col-sm-6 col-sm-3" style="border:0px;background-color:rgba(0,0,0,0);">
-        <div class="tile" [ngClass]="{ odd: odd, even: even }">
-            <div style="vertical-align:middle;text-align:center;">
-                <a href="{{trainingData.path}}" target="_blank">
-                    <h1 style="color: #fcab0e">{{trainingData.title}}</h1>
-                    <img src="{{pdfImg}}">
-                </a>
-            </div>
-        </div>
-    </div>
-</div-->
 <footer-view></footer-view>
