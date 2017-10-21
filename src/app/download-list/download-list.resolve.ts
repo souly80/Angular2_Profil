@@ -12,8 +12,8 @@ export class DownloadListResolver implements Resolve<any> {
 
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any[]>{
         return Observable.forkJoin(
-            this.downloadListService.getTrainingResource(),
             this.downloadListService.getCVResource(),
+            this.downloadListService.getTrainingResource(),
             this.downloadListService.getAttestationsResource(),
             this.downloadListService.getStudiesResource(),
             this.downloadListService.getOthersResource()

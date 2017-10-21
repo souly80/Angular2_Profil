@@ -17,9 +17,9 @@ export class DownloadListComponent implements  OnInit {
         this.downloadData = new Map();
         this.activatedRoute.data.pluck('downloadListData').subscribe((data: any)=> {
             this.downloadData.set("Lebenslauf", data[0]);
-            this.downloadData.set("Studium", data[1]);
-            this.downloadData.set("Schulung", data[2]);
-            this.downloadData.set("Zeugnisse", data[3]);
+            this.downloadData.set("Schulung", data[1]);
+            this.downloadData.set("Zeugnisse", data[2]);
+            this.downloadData.set("Studium", data[3]);
             this.downloadData.set("Sonstiges", data[4]);
         });
     }

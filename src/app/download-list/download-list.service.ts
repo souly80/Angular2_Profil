@@ -17,25 +17,25 @@ export class DownloadListService {
             {
                 title:`Groz-Beckert KG Albstadt`,
                 path:"../../../public/files/groz_beckert.pdf",
-                date: "31.03.2017",
+                date: "31.08.2012",
                 iconPath: require("../../../public/images/pdf.png")
             } as IDownloadData,
             {
                 title:`Siemens AG Karlstruhe`,
                 path:"../../../public/files/siemens.pdf",
-                date: "31.03.2017",
+                date: "31.03.2008",
                 iconPath: require("../../../public/images/pdf.png")
             } as IDownloadData,
             {
                 title:`Frauenhofer Institut IPA Stuttgart`,
                 path:"../../../public/files/frauenhofer.pdf",
-                date: "31.03.2017",
+                date: "31.12.2006",
                 iconPath: require("../../../public/images/pdf.png")
             } as IDownloadData,
             {
                 title:`Thales GmbH Pforzheim`,
                 path:"../../../public/files/thales.pdf",
-                date: "31.03.2017",
+                date: "31.08.2006",
                 iconPath: require("../../../public/images/pdf.png")
             } as IDownloadData
         ];
