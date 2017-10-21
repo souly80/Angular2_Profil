@@ -21,6 +21,7 @@ import {TrainingContentComponent} from "./profil-view/table-content/training-con
 import {DownloadListService} from "./download-list/download-list.service";
 import {DownloadListComponent} from "./download-list/download-list.component";
 import {DownloadListResolver} from "./download-list/download-list.resolve";
+import {KeysPipe} from "./download-list/download-list.interface";
 
 
 export const routes: Routes = [
@@ -51,7 +52,8 @@ export const appDeklarations: any[] = [
       TableComponent,
       ProfilContentComponent,
       TrainingContentComponent,
-      DownloadListComponent
+      DownloadListComponent,
+      KeysPipe
 ];
 
 export const routing = RouterModule.forRoot(routes, {useHash: true});

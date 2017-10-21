@@ -3,7 +3,6 @@ import {Injectable} from "@angular/core";
 import {DownloadListService} from "./download-list.service";
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/router";
 import {Observable} from "rxjs/Observable";
-import {ITrainingDonwloadData} from "./download-list.interface";
 
 @Injectable()
 export class DownloadListResolver implements Resolve<any> {
@@ -14,7 +13,10 @@ export class DownloadListResolver implements Resolve<any> {
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any[]>{
         return Observable.forkJoin(
             this.downloadListService.getTrainingResource(),
-            this.downloadListService.getCVResource()
+            this.downloadListService.getCVResource(),
+            this.downloadListService.getAttestationsResource(),
+            this.downloadListService.getStudiesResource(),
+            this.downloadListService.getOthersResource()
         );
     }
 }

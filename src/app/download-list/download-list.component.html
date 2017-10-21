@@ -1,34 +1,19 @@
-<div class="row">
-    <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
-        <div class="tile purple">
-            <h1><strong>Lebenslauf</strong></h1>
+ <div *ngFor="let entry of downloadData.entries() | keys">
+    <div class="row">
+        <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
+            <div class="tile purple">
+                <h2>{{entry.key}}</h2>
+            </div>
         </div>
     </div>
+    <mat-list *ngFor="let downloadData of entry.value">
+        <mat-list-item>
+            <a target="_blank" class="download-container" href="{{downloadData.path}}">
+                <div class="download-title">{{downloadData.title}} </div>
+                <div class="download-date">{{downloadData.date}} </div>
+                <img src="{{downloadData.iconPath}}" class="download-icon">
+            </a>
+        </mat-list-item>
+        <hr>
+    </mat-list>
 </div>
-<mat-list *ngFor="let cv of cvData">
-    <mat-list-item>
-        <a target="_blank" class="download-container" href="{{cv.path}}">
-            <div class="download-title">{{cv.title}} </div>
-            <img src="{{cv.iconPath}}" class="download-icon">
-        </a>
-    </mat-list-item>
-    <hr>
-</mat-list>
-
-<div class="row">
-    <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
-        <div class="tile purple">
-            <h1><strong>Schulung</strong></h1>
-        </div>
-    </div>
-</div>
-<mat-list *ngFor="let downloadItem of trainingsData">
-    <mat-list-item>
-        <a target="_blank" class="download-container" href="{{downloadItem.path}}">
-            <div class="download-title">{{downloadItem.title}} </div>
-            <div class="download-date">{{downloadItem.date}} </div>
-            <img src="{{downloadItem.iconPath}}" class="download-icon">
-        </a>
-    </mat-list-item>
-    <hr>
-</mat-list>
