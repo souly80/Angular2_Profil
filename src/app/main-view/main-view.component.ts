@@ -10,10 +10,7 @@ const image = require('../../../public/images/home.jpg');
 @Component({
     selector: 'main-view',
     templateUrl: './main-view.component.html',
-   styles: [`
-    .even { background: #F9FBFD; }
-    .odd { background: #F9FBFF; }
-    `],
+   styleUrls: ['./main-view.style.css'],
     providers: [MainViewService],
 })
 export class MainViewComponent {

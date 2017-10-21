@@ -25,3 +25,9 @@
         font-size: 16px;
     }
 }
+
+@media only screen and (max-device-width: 480px) {
+    .video-background{
+        display: none;
+    }
+}

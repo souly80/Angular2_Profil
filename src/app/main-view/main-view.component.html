@@ -1,5 +1,5 @@
 <div style="height: 275px;" #container class="fill" [style.background-image]="'url(' + mainImg + ')'">
-    <video style="opacity: 0.5;width:100%;height:100%;" controls autoplay loop="loop" muted >
+    <video class="video-background" style="opacity: 0.5;width:100%;height:100%;" controls autoplay loop="loop" muted >
         <source src="{{videoPath}}" type="video/mp4">
     </video>
     <div class="textOverImage">
@@ -13,9 +13,6 @@
                 <h2>Jede Reise beginnt mit einem ersten Schritt. (Lao-Tse)</h2>
             </div>
         </div>
-        <!--div (click)="scrollToBottom()" class="rightBottomDiv">
-            <span class="glyphicon glyphicon-circle-arrow-down"></span>
-        </div-->
     </div>
 </div>
 <div class="row">

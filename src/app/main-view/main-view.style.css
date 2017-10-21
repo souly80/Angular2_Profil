@@ -1,0 +1,8 @@
+@media only screen and (max-device-width: 480px) {
+    .video-background{
+        display: none;
+    }
+}
+
+.even { background: #F9FBFD; }
+.odd { background: #F9FBFF; }
