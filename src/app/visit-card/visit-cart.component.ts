@@ -10,6 +10,7 @@ import {IVisitCart} from "./visit-cart.interface";
 })
 export class VisitCartComponent implements OnInit{
     public contactData:IVisitCart;
+    public meImg = require('../../../public/images/me.jpg');
     constructor(private activateRoute: ActivatedRoute){
 
     }
