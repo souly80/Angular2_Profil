@@ -20,7 +20,7 @@ export class ProfilViewComponent implements OnInit{
     public  intershipsData: any;
     private skill: string;
     private pointer: number = 0;
-    meImg = require('../../../public/images/meProfil.png');
+    meImg = require('../../../public/images/me.jpg');
     pdfImg = require('../../../public/images/pdf.png');
     profilImg = require('../../../public/images/project.jpg');
     profilData: IProfilData[];

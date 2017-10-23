@@ -12,7 +12,7 @@ export class VisitCartResolver implements Resolve<IVisitCart> {
             passion: "Fullstack Entwickler von moderne Webanwendungen",
             technologie: "Angular, ASP.NET und C#",
             title: "IT Freelancer: Soulaymane Zemmouri",
-            phoneNumber: "Telefon: +49 176-60362011",
+            phoneNumber: "Telefon: +49 (0) 176 60362011",
             availableFrom: "01.05.2018",
             localtion: "Wohnsitz in Stuttgart"
         } as IVisitCart;
