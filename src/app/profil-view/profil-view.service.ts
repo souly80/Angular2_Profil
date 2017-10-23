@@ -83,16 +83,6 @@ export class ProfilViewService {
                 key:"Prozesse",
                 value:["Requirement Management: Doors ","Change Management RTC ( IBM) ClearQuest","Test Management : HP Quality Center"],
                 tableContentType: TableContentType.CONTENTVALUE_TABLE
-            } as IContentValue,
-            {
-                key:"Sprachen",
-                value:["Arabisch: Muttersprache","Deutsch Verhandlungssicher","Englisch Fließend", "Französisch Fließend"],
-                tableContentType: TableContentType.CONTENTVALUE_TABLE
-            } as IContentValue,
-            {
-                key:"Hobby",
-                value:["Familie" ,"Programmieren" , "Astronomie" , "Schwimmen"],
-                tableContentType: TableContentType.CONTENTVALUE_TABLE
             } as IContentValue
         ];
         return Observable.create((observer: any) => {
