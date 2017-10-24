@@ -1,7 +1,8 @@
-<mat-accordion class="expander-headers-align">
-    <mat-expansion-panel>
-        <mat-expansion-panel-header>
-            <mat-panel-title style="color: blue;">
+<mat-accordion class="expander-headers-align" (opened)="opened()">
+    <mat-expansion-panel (closed)="closed()" (opened)="opened()">
+        <mat-expansion-panel-header [ngClass]="[itemExpaned ? 'minus_content' : 'plus_content']">
+            <mat-panel-title
+                    style="color: blue;">
                 {{title}}
             </mat-panel-title>
             <mat-panel-description id="project-description" style="color: green;">

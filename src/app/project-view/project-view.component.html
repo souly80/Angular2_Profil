@@ -23,7 +23,7 @@
         </div>
     </div>
 </div>
-<div *ngFor="let projectData of projectsData;">
+<div *ngFor="let projectData of projectsData;let i = index">
     <expander-component
             style="margin: 5px;"
             [projectIcon]="projectIcon"
@@ -40,25 +40,4 @@
         </span>
     </expander-component>
 </div>
-<!--div id="container">
-    <div *ngFor="let projectData of projectsData;let odd=odd; let even=even;" style="border:0px;">
-        <span style="background: whitesmoke" class="tile">
-            <span style="vertical-align:middle;text-align:center;color: #fcab0e">
-                <h3 class="project_header">{{projectData.title}}</h3>
-                <p class="project_date">{{projectData.date}}</p>
-            </span>
-            <span style="font-size:15px;">
-                <span *ngFor="let content of projectData.contents">
-                    <span>* {{content}} </span>
-                    <br>
-                </span>
-            </span>
-            <br>
-            <span class="project_key" style="vertical-align:middle;text-align:center;">
-                <span>{{projectData.keys}}</span>
-            </span>
-        </span>
-    </div>
-</div-->
-
 <footer-view></footer-view>

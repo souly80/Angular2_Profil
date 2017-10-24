@@ -37,3 +37,27 @@
         font-size: 16px;
     }
 }
+
+.plus_content::before {
+    content: '+';
+    background: gray;
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    line-height: 54px;
+    margin-right: 27px;
+    text-align: center;
+}
+
+.minus_content::before {
+    content: '-';
+    background: lightgray;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 54px;
+    display: block;
+    float: left;
+    margin-right: 27px;
+    text-align: center;
+}
