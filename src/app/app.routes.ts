@@ -22,16 +22,16 @@ import {DownloadListService} from "./download-list/download-list.service";
 import {DownloadListComponent} from "./download-list/download-list.component";
 import {DownloadListResolver} from "./download-list/download-list.resolve";
 import {KeysPipe} from "./download-list/download-list.interface";
+import {ProjectViewResolver} from "./project-view/project-view.resolver";
 
 
 export const routes: Routes = [
       { path: '', component: MainViewComponent },
-      { path: 'projects', component: ProjectViewComponent },
+      { path: 'projects', component: ProjectViewComponent, resolve: { projectData: ProjectViewResolver }},
       { path: 'profil', component: ProfilViewComponent, resolve: {profilData: ProfilViewResolver } },
       { path: 'contact', component: VisitCartComponent, resolve: { contactData: VisitCartResolver }},
       { path: 'download', component: DownloadListComponent, resolve: { downloadListData: DownloadListResolver }},
       { path: 'impressum', component: ImpressumComponent }
-
 ];
 
 export const appRoutingProviders: any[] = [
@@ -40,7 +40,8 @@ export const appRoutingProviders: any[] = [
       VisitCartResolver,
       ProfilViewResolver,
       DownloadListService,
-      DownloadListResolver
+      DownloadListResolver,
+      ProjectViewResolver
 ];
 
 export const appDeklarations: any[] = [

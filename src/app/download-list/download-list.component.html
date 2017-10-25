@@ -1,20 +1,20 @@
- <div *ngFor="let entry of downloadData.entries() | keys">
-    <div class="row">
-        <div class="col-md-12" style="vertical-align:middle;text-align:center;background-color:rgba(0,0,0,0);border: 0px;">
-            <div class="tile purple">
-                <h2>{{entry.key}}</h2>
-            </div>
-        </div>
-    </div>
-    <mat-list *ngFor="let downloadData of entry.value">
-        <mat-list-item>
-            <a target="_blank" class="download-container" href="{{downloadData.path}}">
-                <div class="download-title">{{downloadData.title}} </div>
-                <div class="download-date">{{downloadData.date}} </div>
-                <img src="{{downloadData.iconPath}}" class="download-icon">
-            </a>
-        </mat-list-item>
-        <hr>
-    </mat-list>
-</div>
+<div *ngFor="let item of downloadData;">
+     <expander-component
+             style="margin: 5px;"
+             [projectIcon]="projectIcon"
+             [projectIconMobile]="projectIconMobile"
+             [descriptionToggled]="item.key"
+             [descriptionHidden]="item.key">
+         <mat-list *ngFor="let dValue of item.value">
+             <mat-list-item>
+                 <a target="_blank" class="download-container" href="{{dValue.path}}">
+                     <div class="download-title">{{dValue.title}} </div>
+                     <div class="download-date">{{dValue.date}} </div>
+                     <img src="{{dValue.iconPath}}" class="download-icon">
+                 </a>
+             </mat-list-item>
+             <hr>
+         </mat-list>
+     </expander-component>
+ </div>
  <footer-view></footer-view>

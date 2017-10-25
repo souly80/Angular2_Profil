@@ -3,6 +3,7 @@ import {Pipe, PipeTransform} from "@angular/core";
 export interface IDownloadData {
     title: string;
     path: string;
+    date: string;
     iconPath: string;
 }
 

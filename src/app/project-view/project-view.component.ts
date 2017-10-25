@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ProjectViewService } from './project-view.service';
 import { Observable } from 'rxjs/Rx';
 import {IProjectData} from "./project-view.interface";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'project-view',
@@ -21,12 +22,17 @@ export class ProjectViewComponent {
   projectIconMobile: string = require('../../../public/assets/project_icon_16.png');
   projectsData: IProjectData[];
   isExpanedArray: boolean[];
-  constructor(private projectViewService: ProjectViewService) {
-    this.projectsData = this.projectViewService.getProjectData();
-    this.isExpanedArray = [];
-    for(let i =0; i< this.projectsData.length - 1; i++) {
-      this.isExpanedArray[i] = false;
-    }
+
+  constructor(private activatedRoute: ActivatedRoute) {
+    let that = this;
+      this.activatedRoute.data.pluck('projectData').subscribe((data: any)=> {
+        that.projectsData = data;
+          that.isExpanedArray = [];
+        for(let i =0; i < that.projectsData.length; i++) {
+            that.isExpanedArray[i] = false;
+        }
+    });
+
     this.skills = ["Industrie 4.0", "IoT", "Manufacturing Execution System", "Bildverarbeitungsysteme", "Application Lifecycle Management", "..."];
     Observable.interval(2000)
       .subscribe((x) => {

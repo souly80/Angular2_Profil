@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import {IProjectData} from "./project-view.interface";
+import {Observable} from "rxjs/Observable";
 
 @Injectable()
 export class ProjectViewService {
-    getProjectData() {
-        return [
+    getProjectData(): Observable<any> {
+        let data = [
             {
                 title: "Senior Webentwickler im Bereich R&D",
                 company: "CREALOGIX Group the Leader for Digital Bank Stuttgart",
@@ -73,5 +74,9 @@ export class ProjectViewService {
                 keys: ["C#,.NET,Winforms,WPF,Halcon (Bildverarbeitung) Subversion, Redgate .Net Performance Profiler,Infragistics"]
             },
         ];
+        return Observable.create((observer: any) => {
+            observer.next(data);
+            observer.complete();
+        });
     }
 }
