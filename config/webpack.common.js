@@ -4,69 +4,68 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./helpers');
 
 module.exports = {
-  entry: {
-    'polyfills': './src/polyfills.ts',
-    'vendor': './src/vendor.ts',
-    'app': './src/main.ts'
-  },
+    entry: {
+        'polyfills': './src/polyfills.ts',
+        'vendor': './src/vendor.ts',
+        'app': './src/main.ts'
+    },
 
-  resolve: {
-    extensions: ['.ts', '.js']
-  },
+    resolve: {
+        extensions: ['.ts', '.js']
+    },
 
-  module: {
-    rules: [
-      {
-        test: /\.ts$/,
-        loaders: [
-          'awenpm run start' +
-          'nasda.kjnsdakjsdnnnnasdasdsome-typescript-loader',
-          'angular2-template-loader',
-          // 'angular2-router-loader'
+    module: {
+        rules: [
+            {
+                test: /\.ts$/,
+                loaders: [
+                    'awesome-typescript-loader',
+                    'angular2-template-loader',
+                    // 'angular2-router-loader'
+                ]
+            },
+            {
+                test: /\.html$/,
+                loader: 'html-loader'
+            },
+            {
+                test: /\.(pdf|png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico|mp4)$/,
+                loader: "file-loader?name=img/img-[hash:6].[ext]"
+                //loader: 'file-loader?name=assets/[name].[hash].[ext]'
+            },
+            {
+                test: /\.css$/,
+                exclude: helpers.root('src', 'app'),
+                loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader?sourceMap' })
+            },
+            {
+                test: /\.css$/,
+                include: helpers.root('src', 'app'),
+                loader: 'raw-loader'
+            }
         ]
-      },
-      {
-        test: /\.html$/,
-        loader: 'html-loader'
-      },
-      {
-        test: /\.(pdf|png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico|mp4)$/,
-        loader: "file-loader?name=img/img-[hash:6].[ext]"
-        //loader: 'file-loader?name=assets/[name].[hash].[ext]'
-      },
-      {
-        test: /\.css$/,
-        exclude: helpers.root('src', 'app'),
-        loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader?sourceMap' })
-      },
-      {
-        test: /\.css$/,
-        include: helpers.root('src', 'app'),
-        loader: 'raw-loader'
-      }
+    },
+
+    plugins: [
+        // Workaround for angular/angular#11580
+        new webpack.ContextReplacementPlugin(
+            // The (\\|\/) piece accounts for path separators in *nix and Windows
+            /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+            helpers.root('./src'), // location of your src
+            {} // a map of your routes
+        ),
+
+        new webpack.optimize.CommonsChunkPlugin({
+            name: ['app', 'vendor', 'polyfills']
+        }),
+
+        new HtmlWebpackPlugin({
+            template: 'src/index.html'
+        }),
+
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        })
     ]
-  },
-
-  plugins: [
-    // Workaround for angular/angular#11580
-    new webpack.ContextReplacementPlugin(
-      // The (\\|\/) piece accounts for path separators in *nix and Windows
-      /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
-      helpers.root('./src'), // location of your src
-      {} // a map of your routes
-    ),
-
-    new webpack.optimize.CommonsChunkPlugin({
-      name: ['app', 'vendor', 'polyfills']
-    }),
-
-    new HtmlWebpackPlugin({
-      template: 'src/index.html'
-    }),
-
-    new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery"
-    })
-  ]
 };
