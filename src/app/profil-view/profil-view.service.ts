@@ -95,6 +95,11 @@ export class ProfilViewService {
         return Observable.create((observer: any) => {
             let data = [
                 {
+                    key: "25.04.2018-26.04.2018",
+                    value: "Certified Git Specialist in Puchheim",
+                    tableContentType: TableContentType.CONTENTVALUE_TABLE
+                },
+                {
                     key: "09.10.2017-11.10.2017",
                     value: "JavaScript Day 2017 in Berlin",
                     tableContentType: TableContentType.CONTENTVALUE_TABLE

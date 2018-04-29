@@ -119,6 +119,12 @@ export class DownloadListService {
     public getTrainingResource(): Observable<IDownloadData[]>{
         let trainingData : IDownloadData[] = [
             {
+                title:`Certified Git Specialist`,
+                path:"../../../public/files/Certified_Git_Specialist.pdf",
+                date: "25.04.2018",
+                iconPath: require("../../../public/images/pdf.png")
+            } as IDownloadData,
+            {
                 title:`Udacity React `,
                 path:"../../../public/files/react.pdf",
                 date: "10.03.2018",
