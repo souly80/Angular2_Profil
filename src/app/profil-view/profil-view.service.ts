@@ -222,6 +222,11 @@ export class ProfilViewService {
                     "art": "Senior Web Entwickler",
                     "realisation": `HTML5, Angular 2,Foundation/Bootstrap,CSS,Javascript/Typescript`,
                     "tasks": [
+                        "Neuentwicklung Next Best Offer Produkt, welches dem Kunden und Berater passende Empfehlungen anzeigt (React, Redux, Sagas)",
+                        "Erstellung Multibanking-Widget in dem Online-Banking-Portal Daten über Bankkonten von Drittanbieter eingebunden (React, Redux, Redux-Thunk)",
+                        "Implementierung einen Mock-Server für Payment Services Directive (PSD2)",
+                        "Integration Multibanking in Abaxx Software. (JSP, Maven)",
+                        "Implementierung der User Experience Portal (UXP), in dem die Widgets zu einer einheitlichen clientseitige Anwendung integriert werden (Typescript)",
                         "Neuentwicklung des Content Management System (CMS) für die Online Banking auf Basis Frontend Technologie (Angular 4) in Kleinen Agile Teams",
                         "Entwicklung Komfortabler Benutzeroberfläche in Zusammenarbeit mit UX Spezialisten",
                         "Qualitätssicherung durch automatisierte Test (Jasmine,Karma Testrunner)",

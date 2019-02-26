@@ -12,12 +12,17 @@ export class ProjectViewService {
                 date: 'seit 04.2017',
                 contents:
                     [
+                        "Neuentwicklung Next Best Offer Produkt, welches dem Kunden und Berater passende Empfehlungen anzeigt (React, Redux, Sagas)",
+                        "Erstellung Multibanking-Widget in dem Online-Banking-Portal Daten über Bankkonten von Drittanbieter eingebunden (React, Redux, Redux-Thunk)",
+                        "Implementierung einen Mock-Server für Payment Services Directive (PSD2)",
+                        "Integration Multibanking in Abaxx Software. (JSP, Maven)",
+                        "Implementierung der User Experience Portal (UXP), in dem die Widgets zu einer einheitlichen clientseitige Anwendung integriert werden (Typescript)",
                         "Neuentwicklung des Content Management System (CMS) für die Online Banking auf Basis Frontend Technologie (Angular 4) in Kleinen Agile Teams.",
                         "Entwicklung Komfortabler Benutzeroberfläche in Zusammenarbeit mit UX Spezialisten.",
-                        "Qualitätssicherung durch automatisierte Tests (Jasmine, Karma Testrunner).",
+                        "Qualitätssicherung durch automatisierte Tests (Jasmine, Karma Testrunner, Jest, Enzyme).",
                         "Pflege und Weiterentwicklung bestehender Client Side Portal Anwendung."
                     ],
-                keys: ["Angular 4, HTML5, Typescript/Javascript, jQuery, Json, Test-Driven Development,Scrum"]
+                keys: ["NodeJS, React, Angular 4, Redux, Sagas, , HTML5, Typescript/Javascript, jQuery, Json, Test-Driven Development"]
             } as IProjectData,
             {
                 title: "Softwarearchitekt und Softwareentwickler in der Fertigung",

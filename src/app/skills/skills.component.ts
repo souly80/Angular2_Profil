@@ -18,7 +18,7 @@ export class SkillsComponent {
     private pointer: number = 0;
     constructor(private skillsService: SkillsService) {
         this.contactContents = this.skillsService.getSkillsContents();
-        this.skills = ["C#", "Java", "JavaScript", "CSS", "AngularJS", "Angular 2", "Typescript", "..."];
+        this.skills = ["React", "Angular", "Typescript", "C#", "Java", "JavaScript", "CSS", "..."];
         Observable.interval(2000)
             .subscribe((x) => {
                 if (this.pointer >= this.skills.length - 1)
