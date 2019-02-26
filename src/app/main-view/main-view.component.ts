@@ -28,7 +28,7 @@ export class MainViewComponent {
     constructor( @Inject(DOCUMENT) private document: any, private mainService: MainViewService) {
         this.mainContents = this.mainService.getMainContents();
         this.certificatesData = this.mainService.getCertificatesData();
-        this.skills = ["C#", "Java", "JavaScript", "CSS", "AngularJS", "Angular 2", "Typescript", "..."];
+        this.skills = ["C#", "Java", "JavaScript", "Redux", "React", "Angular", "Typescript", "..."];
         Observable.interval(2000)
             .subscribe((x) => {
                 if (this.pointer >= this.skills.length - 1)
