@@ -28,9 +28,9 @@ import {ProjectViewResolver} from "./project-view/project-view.resolver";
 export const routes: Routes = [
       { path: '', component: MainViewComponent },
       { path: 'projects', component: ProjectViewComponent, resolve: { projectData: ProjectViewResolver }},
-      { path: 'profil', component: ProfilViewComponent, resolve: {profilData: ProfilViewResolver } },
+      { path: 'aboutme', component: ProfilViewComponent, resolve: {profilData: ProfilViewResolver } },
       { path: 'contact', component: VisitCartComponent, resolve: { contactData: VisitCartResolver }},
-      { path: 'download', component: DownloadListComponent, resolve: { downloadListData: DownloadListResolver }},
+      { path: 'profil', component: DownloadListComponent, resolve: { downloadListData: DownloadListResolver }},
       { path: 'impressum', component: ImpressumComponent }
 ];
 
